@@ -15,9 +15,9 @@
 		<param-name>logbackConfigLocation</param-name>
 		<param-value>classpath:/logback/logback.xml</param-value>
 	</context-param>
-	<listener>  
-		<listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
-	</listener>
+	<!--<listener>  -->
+		<!--<listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>-->
+	<!--</listener>-->
 	<!-- <listener>  
 		<listener-class>cn.ucaner.common.framework.log.LogbackConfigListener</listener-class>
 	</listener> -->
