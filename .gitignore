@@ -5,3 +5,5 @@
 /.project
 /.classpath
 /Java-Advanced.iml
+/target/
+/.tern-project
