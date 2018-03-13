@@ -9,7 +9,7 @@
     <name>Java-Advanced</name>
 
     <properties>
-        <spring.version>4.1.1.RELEASE</spring.version>
+        <spring.version>4.1.6.RELEASE</spring.version>
     </properties>
 
     <dependencies>
@@ -50,6 +50,37 @@
             <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
+        
+        <!-- fastdfs-client 引入 -->
+		<!-- https://mvnrepository.com/artifact/net.oschina.zcx7878/fastdfs-client-java -->
+		<dependency>
+		    <groupId>net.oschina.zcx7878</groupId>
+		    <artifactId>fastdfs-client-java</artifactId>
+		    <version>1.27.0.0</version>
+		</dependency>
+		
+		<!-- 集成工具 -->
+		<dependency>
+		    <groupId>com.github.tobato</groupId>
+		    <artifactId>fastdfs-client</artifactId>
+		    <version>1.25.4-RELEASE</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.10</version>
+		</dependency>
 
         <dependency>
             <groupId>junit</groupId>
