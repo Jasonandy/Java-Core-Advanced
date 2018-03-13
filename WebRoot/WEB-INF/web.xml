@@ -18,9 +18,9 @@
 	<!--<listener>  -->
 		<!--<listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>-->
 	<!--</listener>-->
-	<!-- <listener>  
+	<listener>  
 		<listener-class>cn.ucaner.common.framework.log.LogbackConfigListener</listener-class>
-	</listener> -->
+	</listener>
 	<!-- 指定Spring的配置文件 -->
 	<!-- 否则Spring会默认从WEB-INF下寻找配置文件,contextConfigLocation属性是Spring内部固定的 -->
 	<context-param>

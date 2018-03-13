@@ -107,12 +107,14 @@
 	<!-- 定义无需Controller的url<->view直接映射 -->
 	<mvc:view-controller path="/login" view-name="redirect:/login"/>
 
-
+	<!-- test 页面映射 -->
+	<mvc:resources mapping="/test/**" location="/WEB-INF/views/test/"/>
+	
 	<!-- <mvc:interceptors>
 	<mvc:interceptor>
-		<mvc:exclude-mapping path="/swagger/js/**"/>
-	          <mvc:exclude-mapping path="/swagger/css/**"/>
-	          <mvc:exclude-mapping path="/swagger/images/**"/>
+		<mvc:exclude-mapping path="/test/js/**"/>
+	          <mvc:exclude-mapping path="/test/css/**"/>
+	          <mvc:exclude-mapping path="/test/images/**"/>
 		<bean class="cn.ucaner.common.interceptor.LoginInterceptor" />
 	</mvc:interceptor>
 	</mvc:interceptors> -->
