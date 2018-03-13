@@ -3,7 +3,7 @@
  * <body>
  *  <P> Copyright 1994-2018. JasonInternational.</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2018年3月13日 下午4:24:08</p>
+ *  <p> Created on 2018年3月13日 下午5:40:43</p>
  *  <p> Created by Jason</p>
  *  </body>
  * </html>
@@ -16,29 +16,28 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**     
  * @Package：cn.ucaner.base.view.controlller   
- * @ClassName：CommonController   
- * @Description：   <p> 通用视图控制器</p>
+ * @ClassName：FastDFSController   
+ * @Description：   <p> FastDFSController </p>
  * @Author： - Jason   
- * @CreatTime：2018年3月13日 下午4:24:08   
+ * @CreatTime：2018年3月13日 下午5:40:43   
  * @Modify By：   
  * @ModifyTime：  2018年3月13日
  * @Modify marker：   
  * @version    V1.0
  */
 @Controller
-@RequestMapping("/test")
-public class CommonController {
+@RequestMapping("/dfs")
+public class FastDFSController {
 	
 	/**
-	 * @Description: 测试路由跳转页面
+	 * @Description: dfs 页面
 	 * @return ModelAndView
 	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	@RequestMapping("/index")
     public ModelAndView testIndex() {
-        ModelAndView model = new ModelAndView("test/index");
+        ModelAndView model = new ModelAndView("dfs/index");
         return model;
     }
-	
 
 }
