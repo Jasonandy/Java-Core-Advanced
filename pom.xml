@@ -1,161 +1,182 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>cn.ucaner.java</groupId>
-    <artifactId>Java-Advanced</artifactId>
-    <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <name>Java-Advanced</name>
-
-    <properties>
-        <spring.version>4.1.6.RELEASE</spring.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-        </dependency>
-        
-        <dependency>    
-		    <groupId>org.springframework</groupId>    
-		    <artifactId>spring-context-support</artifactId>    
-		    <version>${spring.version}</version>    
-		</dependency>    
-
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>2.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
-            <scope>test</scope>
-        </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
-		<dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>fastjson</artifactId>
-		    <version>1.2.46</version>
-		</dependency>
-        
-        
-        <dependency>
-	       	<groupId>com.fasterxml.jackson.core</groupId>  
-	               <artifactId>jackson-core</artifactId>  
-	               <version>2.1.0</version>  
-         </dependency>  
-         <dependency>  
-               <groupId>com.fasterxml.jackson.core</groupId>  
-               <artifactId>jackson-databind</artifactId>  
-               <version>2.1.0</version>  
-          </dependency>  
-          <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>  
-               <artifactId>jackson-annotations</artifactId>  
-               <version>2.1.0</version>  
-         </dependency>
-         
-         <dependency>
-			    <groupId>org.freemarker</groupId>
-			    <artifactId>freemarker</artifactId>
-			    <version>2.3.20</version>
-	     </dependency>
-
-      	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<dependency>
-		    <groupId>commons-io</groupId>
-		    <artifactId>commons-io</artifactId>
-		    <version>2.5</version>
-		</dependency>
-
-		  
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.3.1</version>
-		</dependency>
-        <!-- fastdfs-client 引入 -->
-		<!-- https://mvnrepository.com/artifact/net.oschina.zcx7878/fastdfs-client-java -->
-		<dependency>
-		    <groupId>net.oschina.zcx7878</groupId>
-		    <artifactId>fastdfs-client-java</artifactId>
-		    <version>1.27.0.0</version>
-		</dependency>
-		
-		<!-- 集成工具 -->
-		<dependency>
-		    <groupId>com.github.tobato</groupId>
-		    <artifactId>fastdfs-client</artifactId>
-		    <version>1.25.4-RELEASE</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-pool2</artifactId>
-			<version>2.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.5</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-configuration</groupId>
-			<artifactId>commons-configuration</artifactId>
-			<version>1.10</version>
-		</dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <finalName>Java-Advanced</finalName>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <includes>
-                        <include>**/*Tests.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">  
+  <modelVersion>4.0.0</modelVersion>
+  <!-- cn.ucaner.dfs  -->  
+  <groupId>cn.ucaner.dfs</groupId>
+  <!-- Java-Advanced -->  
+  <artifactId>Java-Advanced</artifactId>  
+  <packaging>war</packaging>  
+  <version>1.0-SNAPSHOT</version>  
+  <name>Java-Advanced</name>
+  
+  <!--  全局变量配置-->
+  <properties> 
+    <spring.version>4.1.6.RELEASE</spring.version> 
+  </properties>
+  
+  <dependencies>
+  	<!-- springframework spring-core-->
+    <dependency> 
+      <groupId>org.springframework</groupId>  
+      <artifactId>spring-core</artifactId>  
+      <version>${spring.version}</version> 
+    </dependency>
+    
+    <!-- springframework  spring-web--> 
+    <dependency> 
+      <groupId>org.springframework</groupId>  
+      <artifactId>spring-web</artifactId>  
+      <version>${spring.version}</version> 
+    </dependency>
+    
+    <!-- servlet-api --> 
+    <dependency> 
+      <groupId>javax.servlet</groupId>  
+      <artifactId>servlet-api</artifactId>  
+      <version>2.5</version> 
+    </dependency>
+    
+    <!-- spring-context-support  -->  
+    <dependency> 
+      <groupId>org.springframework</groupId>  
+      <artifactId>spring-context-support</artifactId>  
+      <version>${spring.version}</version> 
+    </dependency>
+    
+    <!-- jsp-api --> 
+    <dependency> 
+      <groupId>javax.servlet.jsp</groupId>  
+      <artifactId>jsp-api</artifactId>  
+      <version>2.1</version>  
+      <scope>provided</scope> 
+    </dependency>
+    
+    <!-- spring-webmvc  -->
+    <dependency> 
+      <groupId>org.springframework</groupId>  
+      <artifactId>spring-webmvc</artifactId>  
+      <version>${spring.version}</version> 
+    </dependency>
+    
+    <!-- spring-test  --> 
+    <dependency> 
+      <groupId>org.springframework</groupId>  
+      <artifactId>spring-test</artifactId>  
+      <version>${spring.version}</version>  
+      <scope>test</scope> 
+    </dependency>
+    
+    <!-- fastjson -->  
+    <dependency> 
+      <groupId>com.alibaba</groupId>  
+      <artifactId>fastjson</artifactId>  
+      <version>1.2.46</version> 
+    </dependency> 
+    
+    <!--  spring-test -->
+    <dependency> 
+      <groupId>com.fasterxml.jackson.core</groupId>  
+      <artifactId>jackson-core</artifactId>  
+      <version>2.1.0</version> 
+    </dependency> 
+    
+    <!-- jackson-databind --> 
+    <dependency> 
+      <groupId>com.fasterxml.jackson.core</groupId>  
+      <artifactId>jackson-databind</artifactId>  
+      <version>2.1.0</version> 
+    </dependency>
+    
+    <!-- jackson-annotations -->  
+    <dependency> 
+      <groupId>com.fasterxml.jackson.core</groupId>  
+      <artifactId>jackson-annotations</artifactId>  
+      <version>2.1.0</version> 
+    </dependency>
+    
+    <!--  freemarker --> 
+    <dependency> 
+      <groupId>org.freemarker</groupId>  
+      <artifactId>freemarker</artifactId>  
+      <version>2.3.20</version> 
+    </dependency>  
+    
+    <!-- commons-io -->  
+    <dependency> 
+      <groupId>commons-io</groupId>  
+      <artifactId>commons-io</artifactId>  
+      <version>2.5</version> 
+    </dependency>
+    
+    <!--  commons-fileupload -->  
+    <dependency> 
+      <groupId>commons-fileupload</groupId>  
+      <artifactId>commons-fileupload</artifactId>  
+      <version>1.3.1</version> 
+    </dependency>
+      
+    <!-- fastdfs-client 引入 -->  
+    <dependency> 
+      <groupId>net.oschina.zcx7878</groupId>  
+      <artifactId>fastdfs-client-java</artifactId>  
+      <version>1.27.0.0</version> 
+    </dependency> 
+     
+    <!-- 集成工具 -->  
+    <dependency> 
+      <groupId>com.github.tobato</groupId>  
+      <artifactId>fastdfs-client</artifactId>  
+      <version>1.25.4-RELEASE</version> 
+    </dependency> 
+    
+    <!-- commons-pool2 -->
+    <dependency> 
+      <groupId>org.apache.commons</groupId>  
+      <artifactId>commons-pool2</artifactId>  
+      <version>2.2</version> 
+    </dependency>
+    
+    <!-- slf4j -->  
+    <dependency> 
+      <groupId>org.slf4j</groupId>  
+      <artifactId>slf4j-api</artifactId>  
+      <version>1.7.5</version> 
+    </dependency> 
+    
+    <!-- configuration --> 
+    <dependency> 
+      <groupId>commons-configuration</groupId>  
+      <artifactId>commons-configuration</artifactId>  
+      <version>1.10</version> 
+    </dependency> 
+    
+    <!-- junit --> 
+    <dependency> 
+      <groupId>junit</groupId>  
+      <artifactId>junit</artifactId>  
+      <version>4.11</version>  
+      <scope>test</scope> 
+    </dependency> 
+  </dependencies>  
+  
+  <!-- build 构建配置  -->
+  <build> 
+    <finalName>Java-Advanced</finalName>  
+    <plugins> 
+      <plugin> 
+        <artifactId>maven-compiler-plugin</artifactId>  
+        <configuration> 
+          <source>1.8</source>  
+          <target>1.8</target> 
+        </configuration> 
+      </plugin>  
+      <plugin> 
+        <artifactId>maven-surefire-plugin</artifactId>  
+        <configuration> 
+          <includes> 
+            <include>**/*Tests.java</include> 
+          </includes> 
+        </configuration> 
+      </plugin> 
+    </plugins> 
+  </build> 
 </project>
