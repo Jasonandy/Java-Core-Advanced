@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs.command;
 
 import java.io.IOException;
@@ -9,7 +18,7 @@ import cn.ucaner.fastdfs.data.Result;
 * @Package：cn.ucaner.fastdfs.command   
 * @ClassName：CloseCmd   
 * @Description：   <p> CloseCmd</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午9:28:59   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日

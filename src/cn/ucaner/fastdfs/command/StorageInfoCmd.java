@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs.command;
 
 import java.io.IOException;
@@ -14,7 +23,7 @@ import cn.ucaner.fastdfs.data.StorageInfo;
 * @Package：cn.ucaner.fastdfs.command   
 * @ClassName：StorageInfoCmd   
 * @Description：   <p> StorageInfoCmd</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午10:32:22   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日

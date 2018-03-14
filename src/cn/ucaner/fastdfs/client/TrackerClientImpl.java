@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs.client;
 
 import java.io.IOException;
@@ -18,12 +27,11 @@ import cn.ucaner.fastdfs.data.Result;
 import cn.ucaner.fastdfs.data.StorageInfo;
 import cn.ucaner.fastdfs.data.UploadStorage;
 
-
 /**
 * @Package：cn.ucaner.fastdfs.client   
 * @ClassName：TrackerClientImpl   
 * @Description：   <p> TrackerClientImpl</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午9:28:40   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日
@@ -32,10 +40,29 @@ import cn.ucaner.fastdfs.data.UploadStorage;
  */
 public class TrackerClientImpl implements TrackerClient{
 	
+	/**
+	 * 套接字
+	 */
 	private Socket socket;
+	
+	/**
+	 * 主机
+	 */
 	private String host;
+	
+	/**
+	 * 端口
+	 */
 	private Integer port;
+	
+	/**
+	 * 连接时长
+	 */
 	private Integer connectTimeout = FastdfsClientConfig.DEFAULT_CONNECT_TIMEOUT * 1000;
+	
+	/**
+	 * 网络时长
+	 */
 	private Integer networkTimeout = FastdfsClientConfig.DEFAULT_NETWORK_TIMEOUT * 1000;
 	
 	public TrackerClientImpl(String address){

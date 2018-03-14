@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs.test;
 
 import static org.junit.Assert.assertNotNull;
@@ -18,7 +27,7 @@ import cn.ucaner.fastdfs.FastdfsClientFactory;
 * @Package：cn.ucaner.fastdfs.test   
 * @ClassName：FastdfsClientTest   
 * @Description：   <p> FastdfsClientTest</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午10:33:47   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日

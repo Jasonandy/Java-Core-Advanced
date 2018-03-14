@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs;
 
 import java.util.ArrayList;
@@ -12,7 +21,7 @@ import org.apache.commons.pool2.impl.GenericKeyedObjectPoolConfig;
 * @Package：cn.ucaner.fastdfs   
 * @ClassName：FastdfsClientConfig   
 * @Description：   <p> FastdfsClientConfig</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午10:34:14   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日

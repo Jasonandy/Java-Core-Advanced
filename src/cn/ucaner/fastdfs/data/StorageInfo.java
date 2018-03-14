@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs.data;
 
 import java.util.Date;
@@ -8,7 +17,7 @@ import cn.ucaner.fastdfs.command.AbstractCmd;
 * @Package：cn.ucaner.fastdfs.data   
 * @ClassName：StorageInfo   
 * @Description：   <p> StorageInfo</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午10:33:02   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日

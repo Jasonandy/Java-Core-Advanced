@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs.client;
 
 import java.io.IOException;
@@ -12,7 +21,7 @@ import cn.ucaner.fastdfs.FastdfsClientConfig;
 * @Package：cn.ucaner.fastdfs.client   
 * @ClassName：TrackerClientFactory   
 * @Description：   <p> TrackerClientFactory</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午9:28:32   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日

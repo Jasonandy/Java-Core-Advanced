@@ -1,10 +1,19 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs.data;
 
 /**
 * @Package：cn.ucaner.fastdfs.data   
 * @ClassName：Result   
 * @Description：   <p> Result</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午10:32:51   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日
@@ -13,8 +22,19 @@ package cn.ucaner.fastdfs.data;
  */
 public class Result<T> {
 
+	/**
+	 * 状态code
+	 */
 	private int code;
+	
+	/**
+	 * 结果信息
+	 */
 	private String message;
+	
+	/**
+	 * 结果对象信息
+	 */
 	private T data;
 	
 	public Result(int code) {

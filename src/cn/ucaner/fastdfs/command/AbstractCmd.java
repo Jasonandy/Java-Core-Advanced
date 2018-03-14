@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.fastdfs.command;
 
 import java.io.ByteArrayOutputStream;
@@ -10,7 +19,7 @@ import java.util.Arrays;
 * @Package：cn.ucaner.fastdfs.command   
 * @ClassName：AbstractCmd   
 * @Description：   <p> AbstractCmd</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年3月14日 上午9:28:50   
 * @Modify By：   
 * @ModifyTime：  2018年3月14日
@@ -25,11 +34,24 @@ public abstract class AbstractCmd<T> implements Command<T> {
 	protected byte[] body1;
 	protected long body2Len = 0l;
 	
+	/**
+	 * @Description: request
+	 * @param socketOut
+	 * @throws IOException void
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	protected void request(OutputStream socketOut)throws IOException {
 		socketOut.write(getRequestHeaderAndBody1());
 		
 	}
 	
+	/**
+	 * @Description: request
+	 * @param socketOut
+	 * @param is
+	 * @throws IOException void
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	protected void request(OutputStream socketOut,InputStream is)throws IOException {
 		request(socketOut);
 		int readBytes;
