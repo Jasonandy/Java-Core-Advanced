@@ -147,7 +147,6 @@ public class WebLogbackConfigurer {
 	 * @return {@code true} if the webapp's root should be exposed; otherwise, {@code false}
 	 * @see #EXPOSE_WEB_APP_ROOT_PARAM
 	 */
-	@SuppressWarnings({ "BooleanMethodNameMustStartWithQuestion" })
 	private static boolean exposeWebAppRoot(ServletContext servletContext) {
 		String exposeWebAppRootParam = servletContext.getInitParameter(EXPOSE_WEB_APP_ROOT_PARAM);
 		return ( exposeWebAppRootParam == null || Boolean.valueOf(exposeWebAppRootParam) );
