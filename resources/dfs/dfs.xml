@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd 
+    http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd 
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+    default-lazy-init="false">
+    
+	<!--配置扫描包-->
+    <context:component-scan base-package="com.github.tobato.fastdfs.service,com.github.tobato.fastdfs.domain"/>
+    
+    <!--配置连接管理器-->
+    <bean id="trackerConnectionManager" class="com.github.tobato.fastdfs.conn.TrackerConnectionManager">
+        <constructor-arg name="pool" ref="fdfsConnectionPool">
+        </constructor-arg>
+        <!--配置fastDFS tracker 服务器 ip:port 地址-->
+        <property name="trackerList">
+            <list>
+            	<!-- 67.218.158.137:22122  -->
+                <value>${tracker_server}</value>
+            </list>
+        </property>
+    </bean>
+    
+    <!--配置连接池-->
+    <bean id="fdfsConnectionPool" class="com.github.tobato.fastdfs.conn.FdfsConnectionPool">
+        <!--注入连接池配置-->
+        <constructor-arg name="config" >
+            <bean class="com.github.tobato.fastdfs.conn.ConnectionPoolConfig"/>
+        </constructor-arg>
+        <!--注入连接池工厂-->
+        <constructor-arg name="factory" >
+            <bean class="com.github.tobato.fastdfs.conn.PooledConnectionFactory"/>
+        </constructor-arg>
+    </bean>
+	
+</beans>

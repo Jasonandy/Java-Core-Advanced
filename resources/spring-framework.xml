@@ -23,6 +23,8 @@
                 <value>classpath*:/jdbc/jdbc.properties</value>
                 <!-- 引入log4j配置文件-->
                 <value>classpath*:/log4j.properties</value>
+                <!-- 引入fastDFS入配置文件-->
+                <value>classpath*:/dfs/fastDFSClient.properties</value>
             </list>
         </property>
     </bean>
@@ -35,6 +37,9 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
         <context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
     </context:component-scan>
+    
+    <!-- 引入fastDFS 基于com.github.tobato.fastdfs  -->
+    <import resource="classpath*:/dfs/dfs.xml" />
 
     
 </beans>

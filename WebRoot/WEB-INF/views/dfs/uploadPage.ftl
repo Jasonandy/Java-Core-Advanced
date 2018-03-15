@@ -15,6 +15,14 @@
         <form action="./uploadFile" method="POST" enctype="multipart/form-data">  
 		          文件1: <input type="file" name="fileName"/><br/>   
 		    	  <input type="submit" value="上传"/>   
+		</form> 
+		
+		<div align="center">
+            <h1>SpringBean Test</h1>
+        </div>
+		<form action="http://localhost:8280/Java-Advanced/dfs/uploadFile" method="POST" enctype="multipart/form-data">  
+		          文件2: <input type="file" name="fileName"/><br/>   
+		    	  <input type="submit" value="上传"/>   
 		</form>  
     </div>
 </div>
