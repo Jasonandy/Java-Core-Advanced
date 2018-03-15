@@ -7,7 +7,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.fastdfs.client;
+package cn.ucaner.fastdfs.client.factory;
 
 import java.io.IOException;
 
@@ -16,11 +16,13 @@ import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.impl.DefaultPooledObject;
 
 import cn.ucaner.fastdfs.FastdfsClientConfig;
+import cn.ucaner.fastdfs.client.TrackerClient;
+import cn.ucaner.fastdfs.client.impl.TrackerClientImpl;
 
 /**
 * @Package：cn.ucaner.fastdfs.client   
 * @ClassName：TrackerClientFactory   
-* @Description：   <p> TrackerClientFactory</p>
+* @Description：   <p> TrackerClientFactory TrackerClient工厂类 </p>
 * @Author： - Jason   
 * @CreatTime：2018年3月14日 上午9:28:32   
 * @Modify By：   
@@ -43,6 +45,9 @@ public class TrackerClientFactory implements KeyedPooledObjectFactory<String,Tra
 		this.networkTimeout = networkTimeout;
 	}
 
+	/**
+	 * 创建对象
+	 */
 	@Override
 	public PooledObject<TrackerClient> makeObject(String key){
 		TrackerClient trackerClient = new TrackerClientImpl(key,connectTimeout,networkTimeout);
@@ -50,33 +55,37 @@ public class TrackerClientFactory implements KeyedPooledObjectFactory<String,Tra
 		return pooledTrackerClient;
 	}
 
+	/**
+	 * 销毁对象
+	 */
 	@Override
 	public void destroyObject(String key, PooledObject<TrackerClient> pooledTrackerClient) throws IOException{
 		TrackerClient trackerClient = pooledTrackerClient.getObject();
 		trackerClient.close();
 	}
 
+	/**
+	 * 校验
+	 */
 	@Override
 	public boolean validateObject(String key, PooledObject<TrackerClient> p) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
+	/**
+	 * 激活
+	 */
 	@Override
 	public void activateObject(String key, PooledObject<TrackerClient> p)
 			throws Exception {
-		// TODO Auto-generated method stub
 		
 	}
 
+	
 	@Override
 	public void passivateObject(String key, PooledObject<TrackerClient> p)
 			throws Exception {
-		// TODO Auto-generated method stub
 		
 	}
-
-	
-	
 
 }

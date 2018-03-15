@@ -48,6 +48,11 @@ public class GetMetaDataCmd extends AbstractCmd<Map<String, String>> {
 		}
 	}
 
+	/**
+	* GetMetaDataCmd.  获取元数据信息
+	* @param group
+	* @param fileName
+	*/
 	public GetMetaDataCmd(String group, String fileName) {
 		super();
 		byte[] groupByte = group.getBytes(charset);

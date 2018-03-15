@@ -7,7 +7,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.fastdfs.client;
+package cn.ucaner.fastdfs.client.impl;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -15,6 +15,7 @@ import java.net.Socket;
 import java.util.List;
 
 import cn.ucaner.fastdfs.FastdfsClientConfig;
+import cn.ucaner.fastdfs.client.TrackerClient;
 import cn.ucaner.fastdfs.command.CloseCmd;
 import cn.ucaner.fastdfs.command.Command;
 import cn.ucaner.fastdfs.command.GroupInfoCmd;

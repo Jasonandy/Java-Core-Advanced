@@ -7,7 +7,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.fastdfs.client;
+package cn.ucaner.fastdfs.client.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +16,7 @@ import java.net.Socket;
 import java.util.Map;
 
 import cn.ucaner.fastdfs.FastdfsClientConfig;
+import cn.ucaner.fastdfs.client.StorageClient;
 import cn.ucaner.fastdfs.command.CloseCmd;
 import cn.ucaner.fastdfs.command.Command;
 import cn.ucaner.fastdfs.command.DeleteCmd;

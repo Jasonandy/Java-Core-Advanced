@@ -32,6 +32,9 @@ public class CloseCmd extends AbstractCmd<Boolean> {
 		this.requestCmd = FDFS_PROTO_CMD_QUIT;
 	}
 
+	/**
+	 * execute
+	 */
 	@Override
 	public Result<Boolean> exec(Socket socket) throws IOException {
 		request(socket.getOutputStream());

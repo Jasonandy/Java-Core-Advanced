@@ -91,6 +91,11 @@ public class StorageInfo {
 	public final static int BYTE_SIZE = 600;
 	
 
+	/**
+	* StorageInfo.   初始化
+	* @param data
+	* @param offset
+	*/
 	public StorageInfo(byte[] data,int offset) {
 		status = data[offset];
 		offset += 1;
@@ -568,6 +573,4 @@ public class StorageInfo {
 	public void setIfTrunkServer(boolean ifTrunkServer) {
 		this.ifTrunkServer = ifTrunkServer;
 	}
-	
-	
 }

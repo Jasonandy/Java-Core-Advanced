@@ -47,6 +47,11 @@ public class QueryUpdateCmd extends AbstractCmd<String> {
 		}
 	}
 
+	/** 
+	* QueryUpdateCmd.  update comand 
+	* @param group 
+	* @param fileName
+	 */
 	public QueryUpdateCmd(String group,String fileName) {
 		super();
 		byte[] groupByte = group.getBytes(charset);

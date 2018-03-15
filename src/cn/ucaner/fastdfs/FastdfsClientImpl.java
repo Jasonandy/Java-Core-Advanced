@@ -21,9 +21,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cn.ucaner.fastdfs.client.StorageClient;
-import cn.ucaner.fastdfs.client.StorageClientFactory;
 import cn.ucaner.fastdfs.client.TrackerClient;
-import cn.ucaner.fastdfs.client.TrackerClientFactory;
+import cn.ucaner.fastdfs.client.factory.StorageClientFactory;
+import cn.ucaner.fastdfs.client.factory.TrackerClientFactory;
 import cn.ucaner.fastdfs.data.GroupInfo;
 import cn.ucaner.fastdfs.data.Result;
 import cn.ucaner.fastdfs.data.StorageInfo;

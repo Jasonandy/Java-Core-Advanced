@@ -55,6 +55,11 @@ public class StorageInfoCmd extends AbstractCmd<List<StorageInfo>> {
 		}
 	}
 
+	/**
+	* StorageInfoCmd.  存储信息command
+	* @param group
+	* @throws UnsupportedEncodingException
+	 */
 	public StorageInfoCmd(String group) throws UnsupportedEncodingException {
 		super();
 		int group_len;
@@ -72,6 +77,12 @@ public class StorageInfoCmd extends AbstractCmd<List<StorageInfo>> {
 		this.responseSize = -1;
 	}
 
+	/**
+	* StorageInfoCmd.  存储信息command
+	* @param group
+	* @param ip
+	* @throws UnsupportedEncodingException
+	 */
 	public StorageInfoCmd(String group,String ip) throws UnsupportedEncodingException {
 		super();
 		int group_len;
@@ -90,7 +101,5 @@ public class StorageInfoCmd extends AbstractCmd<List<StorageInfo>> {
 		this.responseCmd = TRACKER_PROTO_CMD_RESP;
 		this.responseSize = -1;
 	}
-	
-	
 
 }

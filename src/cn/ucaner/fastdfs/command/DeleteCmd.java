@@ -35,12 +35,23 @@ public class DeleteCmd extends AbstractCmd<Boolean> {
 		if(response.isSuccess()){
 			return new Result<Boolean>(response.getCode(),true);
 		}else{
+			/**
+			 * delete error exception
+			 */
 			return new Result<Boolean>(response.getCode(),"Delete Error");
 		}
 	}
 
+	/**
+	* DeleteCmd.  Delete comand
+	* @param group 
+	* @param fileName
+	 */
 	public DeleteCmd(String group,String fileName) {
 		super();
+		/**
+		 * 字符集utf-8
+		 */
 		byte[] groupByte = group.getBytes(charset);
 		int group_len = groupByte.length;
 		if (group_len > FDFS_GROUP_NAME_MAX_LEN) {

@@ -7,7 +7,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.fastdfs.client;
+package cn.ucaner.fastdfs.client.factory;
 
 import java.io.IOException;
 
@@ -16,11 +16,13 @@ import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.impl.DefaultPooledObject;
 
 import cn.ucaner.fastdfs.FastdfsClientConfig;
+import cn.ucaner.fastdfs.client.StorageClient;
+import cn.ucaner.fastdfs.client.impl.StorageClientImpl;
 
 /**
 * @Package：cn.ucaner.fastdfs.client   
 * @ClassName：StorageClientFactory   
-* @Description：   <p> StorageClientFactory</p>
+* @Description：   <p> StorageClientFactory  StorageClient 工厂类</p>
 * @Author： - Jason   
 * @CreatTime：2018年3月14日 上午9:27:50   
 * @Modify By：   

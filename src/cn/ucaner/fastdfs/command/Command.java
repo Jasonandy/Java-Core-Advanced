@@ -28,6 +28,13 @@ import cn.ucaner.fastdfs.data.Result;
  */
 public interface Command<T> {
 
+	/**
+	 * @Description: exec 套接字执行
+	 * @param socket
+	 * @return
+	 * @throws IOException Result<T>
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	public Result<T> exec(Socket socket) throws IOException;
 	
 	
@@ -114,7 +121,14 @@ public interface Command<T> {
 	public static final long NORMAL_LOGIC_FILENAME_LENGTH = FDFS_FILE_PATH_LEN	+ FDFS_FILENAME_BASE64_LENGTH + FDFS_FILE_EXT_NAME_MAX_LEN + 1;
 	public static final long TRUNK_LOGIC_FILENAME_LENGTH = NORMAL_LOGIC_FILENAME_LENGTH	+ FDFS_TRUNK_FILE_INFO_LEN;
 	
+	/**
+	 * 成功标志位
+	 */
 	public static final int SUCCESS_CODE = 0;
+	
+	/**
+	 * 字符集   utf-8
+	 */
 	public Charset charset = Charset.forName("UTF-8");
 	
 }

@@ -19,7 +19,7 @@ import cn.ucaner.fastdfs.data.Result;
 /**
 * @Package：cn.ucaner.fastdfs.command   
 * @ClassName：SetMetaDataCmd   
-* @Description：   <p> SetMetaDataCmd</p>
+* @Description：   <p> SetMetaDataCmd  设置元信息</p>
 * @Author： - Jason   
 * @CreatTime：2018年3月14日 上午10:32:12   
 * @Modify By：   
@@ -73,6 +73,12 @@ public class SetMetaDataCmd extends AbstractCmd<Boolean> {
 		this.responseSize = 0;
 	}
 	
+	/**
+	 * @Description: 元数据拼接为字符串
+	 * @param metaData
+	 * @return String
+	 * @Autor: Jason - jaonandy@hotmail.com
+	 */
 	private String metaDataToStr(Map<String,String> metaData){
 		StringBuffer sb = new StringBuffer();
 		for(String key:metaData.keySet()){

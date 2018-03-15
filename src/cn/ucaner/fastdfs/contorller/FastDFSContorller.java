@@ -60,7 +60,6 @@ public class FastDFSContorller {
         return model;
     }
 	
-	
 	/**
 	 * @Description: 上传接口
 	 * @param request
@@ -96,8 +95,5 @@ public class FastDFSContorller {
 		}
 		return new RespBody(Status.OK,resultUpload,"fastDFS上传成功!");
 	}
-	
-	
-	
 
 }

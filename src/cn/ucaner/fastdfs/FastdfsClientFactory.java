@@ -16,9 +16,9 @@ import org.apache.commons.pool2.impl.GenericKeyedObjectPool;
 import org.apache.commons.pool2.impl.GenericKeyedObjectPoolConfig;
 
 import cn.ucaner.fastdfs.client.StorageClient;
-import cn.ucaner.fastdfs.client.StorageClientFactory;
 import cn.ucaner.fastdfs.client.TrackerClient;
-import cn.ucaner.fastdfs.client.TrackerClientFactory;
+import cn.ucaner.fastdfs.client.factory.StorageClientFactory;
+import cn.ucaner.fastdfs.client.factory.TrackerClientFactory;
 
 /**
 * @Package：cn.ucaner.fastdfs   

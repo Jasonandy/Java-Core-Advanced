@@ -30,8 +30,8 @@ import org.apache.commons.pool2.impl.GenericKeyedObjectPoolConfig;
  */
 public class FastdfsClientConfig {
 	
-	public static final int DEFAULT_CONNECT_TIMEOUT = 5; // second
-	public static final int DEFAULT_NETWORK_TIMEOUT = 30; // second
+	public static final int DEFAULT_CONNECT_TIMEOUT = 5; // second  默认的连接超时时间
+	public static final int DEFAULT_NETWORK_TIMEOUT = 30; // second 默认的网络超时时间
 	
 	private int connectTimeout = DEFAULT_CONNECT_TIMEOUT * 1000;
 	private int networkTimeout = DEFAULT_NETWORK_TIMEOUT * 1000;

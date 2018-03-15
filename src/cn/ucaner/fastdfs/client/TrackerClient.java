@@ -30,11 +30,55 @@ import cn.ucaner.fastdfs.data.UploadStorage;
  */
 public interface TrackerClient {
 
+	/**
+	 * @Description: getUploadStorage  
+	 * @return
+	 * @throws IOException Result<UploadStorage>
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	public Result<UploadStorage> getUploadStorage() throws IOException;
+	
+	/**
+	 * @Description: getUpdateStorageAddr   
+	 * @param group 	获取资源根据group
+	 * @param fileName 	文件名字 fileName
+	 * @throws IOException Result<String>
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	public Result<String> getUpdateStorageAddr(String group,String fileName) throws IOException;
+	
+	/**
+	 * @Description: getDownloadStorageAddr
+	 * @param group		获取资源根据group
+	 * @param fileName	文件名字 fileName
+	 * @return
+	 * @throws IOException Result<String>
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	public Result<String> getDownloadStorageAddr(String group,String fileName) throws IOException;
+	
+	/**
+	 * @Description: getGroupInfos 获取group信息
+	 * @return
+	 * @throws IOException Result<List<GroupInfo>>
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	public Result<List<GroupInfo>> getGroupInfos() throws IOException;
+	
+	/**
+	 * @Description: getStorageInfos
+	 * @param group  group 获取存储信息
+	 * @return
+	 * @throws IOException Result<List<StorageInfo>>
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	public Result<List<StorageInfo>> getStorageInfos(String group) throws IOException;
+	
+	/**
+	 * @Description: close 关闭客户端释放资源
+	 * @throws IOException void
+	 * @Autor: Jason - jasonandy@hotmail.com 
+	 */
 	public void close() throws IOException;
 	
 }

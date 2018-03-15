@@ -15,12 +15,13 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.alibaba.fastjson.JSONArray;
 
 import cn.ucaner.fastdfs.file.FastDFSFile;
 import cn.ucaner.fastdfs.file.client.FastDFSClient;
-
 
 /**     
  * @Package：cn.ucaner.fastdfs.file.test   
@@ -34,6 +35,8 @@ import cn.ucaner.fastdfs.file.client.FastDFSClient;
  * @version    V1.0
  */
 public class FastDFSTest {
+	
+	private static Logger logger = LoggerFactory.getLogger(FastDFSClient.class);
 	
 	/**
 	 * @Description: 测试client端
@@ -55,15 +58,22 @@ public class FastDFSTest {
 			}
 			fis.close();
 			FastDFSFile fastDFSFile = new FastDFSFile();
+			
+			/**
+			 * 文件内容
+			 * 文件扩展名
+			 * 文件md5信息摘要
+			 */
 			fastDFSFile.setContent(bos.toByteArray());
 			fastDFSFile.setExt("ico");
 
 			// -------上传----
 			JSONArray rs = FastDFSClient.upload(fastDFSFile);
-			System.out.println("上传结束:" + rs);
+			logger.info("上传成功！ 详细数据为{} . - By Jason",rs);
 
-			// -------下载----
+			// -------下载---- 下载为byte[] 数据
 			byte[] dfile = FastDFSClient.download(rs.getString(0), rs.getString(1));
+			
 			
 			FileOutputStream fos = new FileOutputStream(new File("C:/Users/Jason/Pictures/design/tx-chrome.ico"));
 			fos.write(dfile);
@@ -72,9 +82,8 @@ public class FastDFSTest {
 			
 			// -------删除-----
 			int ds=FastDFSClient.delete(rs.getString(0), rs.getString(1));
-			//
-			System.out.println("Delete:"+ds);
-			System.out.println("---End----");
+			
+			logger.info("删除成功！ 受影响的数据为 {} . - By Jason",ds);
 
 		} catch (Exception e) {
 			e.printStackTrace();

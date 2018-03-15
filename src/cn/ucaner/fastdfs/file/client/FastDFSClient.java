@@ -49,20 +49,27 @@ public class FastDFSClient {
 	private static StorageClient1 storageClient1 = null;
 
 	// 初始化客户端,加载类时候执行片段
+	// 静态代码块  初始化
+	/**
+	 * 基于github开源项目
+	 * @url https://github.com/happyfish100/fastdfs-client-java 
+	 */
 	static {
 		try {
 			//dfs/fastDFSClient.properties
+			//加载配置相关的配置文件 后期修改为 SpringBean初始化
 			Resource resource = new ClassPathResource("dfs/fastDFSClient.properties");
 			File file = resource.getFile();
 			String configFile = file.getAbsolutePath();
+			//初始化
 			ClientGlobal.init(configFile);
-			//
+			//获取跟踪器客户端
 			TrackerClient trackerClient = new TrackerClient(ClientGlobal.g_tracker_group);
-			//
+			//获取跟踪器服务端
 			TrackerServer trackerServer = trackerClient.getConnection();
-			//
+			//获取存储器服务端
 			StorageServer storageServer = trackerClient.getStoreStorage(trackerServer);
-			//
+			//获取存储器客户端
 			storageClient1 = new StorageClient1(trackerServer, storageServer);
 			logger.info("fastDFS Client Init Success! -- thk.");
 		} catch (Exception e) {

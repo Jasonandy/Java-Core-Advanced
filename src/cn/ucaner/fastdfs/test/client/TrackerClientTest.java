@@ -19,7 +19,7 @@ import java.util.List;
 import org.junit.Test;
 
 import cn.ucaner.fastdfs.client.TrackerClient;
-import cn.ucaner.fastdfs.client.TrackerClientImpl;
+import cn.ucaner.fastdfs.client.impl.TrackerClientImpl;
 import cn.ucaner.fastdfs.data.GroupInfo;
 import cn.ucaner.fastdfs.data.Result;
 import cn.ucaner.fastdfs.data.UploadStorage;

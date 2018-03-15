@@ -28,14 +28,33 @@ import java.util.Arrays;
  */
 public abstract class AbstractCmd<T> implements Command<T> {
 	
+	/**
+	 * requestCmd
+	 */
 	protected byte requestCmd;
+	
+	/**
+	 * responseCmd 
+	 */
 	protected byte responseCmd;
+	
+	/**
+	 * responseSize
+	 */
 	protected long responseSize;
+	
+	/**
+	 * body1
+	 */
 	protected byte[] body1;
+	
+	/**
+	 * body2Len
+	 */
 	protected long body2Len = 0l;
 	
 	/**
-	 * @Description: request
+	 * @Description: request  请求
 	 * @param socketOut
 	 * @throws IOException void
 	 * @Autor: Jason - jasonandy@hotmail.com
@@ -79,6 +98,13 @@ public abstract class AbstractCmd<T> implements Command<T> {
 		return header;
 	}
 	
+	/**
+	 * @Description: 响应数据
+	 * @param socketIn
+	 * @return Response
+	 * @throws IOException Response
+	 * @Autor: DaoDou - wub@sun309.com
+	 */
 	protected Response response(InputStream socketIn)throws IOException {
 		ByteArrayOutputStream os = new ByteArrayOutputStream();
 		int code = response(socketIn,os);
@@ -86,6 +112,14 @@ public abstract class AbstractCmd<T> implements Command<T> {
 		
 	}
 	
+	/**
+	 * @Description: response
+	 * @param socketIn
+	 * @param os
+	 * @return 
+	 * @throws IOException int
+	 * @Autor: Jason - jasonandy@hotamil.com
+	 */
 	protected int response(InputStream socketIn,OutputStream os) throws IOException {
 		byte[] header = new byte[FDFS_PROTO_PKG_LEN_SIZE + 2];
 		
@@ -138,6 +172,7 @@ public abstract class AbstractCmd<T> implements Command<T> {
 		return SUCCESS_CODE;
 	}
 	
+	
 	public static byte[] long2buff(long n) {
 		byte[] bs;
 
@@ -172,8 +207,14 @@ public abstract class AbstractCmd<T> implements Command<T> {
 						: 256 + bs[offset + 7]));
 	}
 	
+	
+	/**
+	* @Package：cn.ucaner.fastdfs.command   
+	* @ClassName：Response   
+	* @Description：   <p> Response  内部类 定义响应 </p>
+	* @Author： - Jason   
+	 */
 	protected class Response {
-		
 		private int code;
 		private byte[] data;
 		
@@ -201,7 +242,6 @@ public abstract class AbstractCmd<T> implements Command<T> {
 		public void setData(byte[] data) {
 			this.data = data;
 		}
-		
 	}
 	
 }

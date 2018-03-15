@@ -72,9 +72,22 @@ public class UploadCmd extends AbstractCmd<String> {
 		System.arraycopy(fileExtNameByte, 0, body1, fileSizeByte.length + 1, fileExtNameByteLen);
 	}
 
+	/**
+	 * @Description: 获取文件扩展名   .exe .zip .jpg .png etc..
+	 * @param fileName
+	 * @return byte[] 
+	 * @Autor: DaoDou - wub@sun309.com
+	 */
 	private byte[] getFileExtNameByte(String fileName) {
 		String fileExtName = null;
+		/**
+		 * 最后一个以  "." 结尾的 index 位置
+		 * dot postiton
+		 */
 		int nPos = fileName.lastIndexOf('.');
+		/**
+		 * FDFS_FILE_EXT_NAME_MAX_LEN 扩展名最长限制 6 位
+		 */
 		if (nPos > 0 && fileName.length() - nPos <= FDFS_FILE_EXT_NAME_MAX_LEN + 1) {
 			fileExtName = fileName.substring(nPos + 1);
 		}

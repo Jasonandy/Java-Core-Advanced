@@ -49,6 +49,9 @@ public class QueryUploadCmd extends AbstractCmd<UploadStorage>  {
 	}
 
 
+	/**
+	* QueryUploadCmd. 初始化属性参数
+	 */
 	public QueryUploadCmd() {
 		super();
 		this.requestCmd = TRACKER_PROTO_CMD_SERVICE_QUERY_STORE_WITHOUT_GROUP_ONE;
