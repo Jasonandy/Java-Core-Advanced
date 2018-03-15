@@ -18,6 +18,7 @@
         <!--配置fastDFS tracker 服务器 ip:port 地址-->
         <property name="trackerList">
             <list>
+            	<!-- 集群 -->
             	<!-- 67.218.158.137:22122  -->
                 <value>${tracker_server}</value>
             </list>
@@ -28,11 +29,17 @@
     <bean id="fdfsConnectionPool" class="com.github.tobato.fastdfs.conn.FdfsConnectionPool">
         <!--注入连接池配置-->
         <constructor-arg name="config" >
+        	<!-- 对bean做具体的配置处理 -->
             <bean class="com.github.tobato.fastdfs.conn.ConnectionPoolConfig"/>
         </constructor-arg>
         <!--注入连接池工厂-->
         <constructor-arg name="factory" >
             <bean class="com.github.tobato.fastdfs.conn.PooledConnectionFactory"/>
+            <!-- <bean class="com.github.tobato.fastdfs.conn.PooledConnectionFactory">
+	            <property name="soTimeout" value="${network_timeout}"></property>
+	            <property name="connectTimeout" value="${connect_timeout}"></property>
+	            <property name="charset" value="${charset}"></property>
+            </bean> -->
         </constructor-arg>
     </bean>
 	
