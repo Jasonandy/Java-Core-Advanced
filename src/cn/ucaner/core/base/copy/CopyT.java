@@ -19,7 +19,11 @@ package cn.ucaner.core.base.copy;
 /**
 * @Package：cn.ucaner.core.base.copy   
 * @ClassName：Family   
-* @Description：   <p> 深拷贝与浅拷贝</p>
+* @Description：   <p> 深拷贝与浅拷贝 
+* {@link https://blog.csdn.net/XIAXIA__/article/details/41652057}
+* {@link https://blog.csdn.net/u014727260/article/details/55003402}
+* {@link https://blog.csdn.net/baiye_xing/article/details/71788741}
+* </p>
 * @Author： - Jeff Lee   
 * @CreatTime：2018年4月5日 下午1:40:35   
 * @Modify By：   
@@ -54,9 +58,11 @@ class Family implements Cloneable{
         return o;
     }*/
 }
+
 class Student implements Cloneable{
+	
     private String name;
-    private Family family;
+    private Family family;//Family  Cloneable
 
     public String getName() {
         return name;
@@ -102,18 +108,19 @@ class Student implements Cloneable{
 
 public class CopyT {
 	
-	
     public static void main(String[] args) throws CloneNotSupportedException {
         Family family = new Family();
-        family.setName("Jeff Family");
+        family.setName("Jeff Family obj ");
         Student student1 = new Student();
         student1.setFamily(family);
-        student1.setName("Jeff");
+        student1.setName("Jeff String");
 
-        Student student2 = (Student) student1.clone();
+        Student student2 = (Student) student1.clone();//
         student2.setName("Jeff2");
         student2.getFamily().setName("Jeff2 Family");
         System.out.println(student1.getName() + " " + student1.getFamily().getName());
         System.out.println(student2.getName() + " " + student2.getFamily().getName());
+       /* Jeff Jeff2 Family
+        Jeff2 Jeff2 Family*/
     }
 }
