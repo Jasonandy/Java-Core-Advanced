@@ -28,6 +28,7 @@ package cn.ucaner.core.base.copy;
 * @version    V1.0
  */
 class Family implements Cloneable{
+	
     private String name;
 
     public String getName() {
@@ -100,6 +101,8 @@ class Student implements Cloneable{
 }
 
 public class CopyT {
+	
+	
     public static void main(String[] args) throws CloneNotSupportedException {
         Family family = new Family();
         family.setName("Jeff Family");

@@ -17,7 +17,6 @@ package cn.ucaner.core.base.String;
  * limitations under the License.
  */
 
-
 /**
 * @Package：cn.ucaner.core.base.String   
 * @ClassName：StringT2   
@@ -35,16 +34,34 @@ public class StringT2 {
         StringObject sb = new StringObject();
         sb.setName("123");
         change(sb);
-        System.out.println(sb.getName());
+        System.out.println(sb.getName());//123
+        changeObj(sb);
+        System.out.println(sb.getName());//123  
+        StringObject changeObj = changeObj(sb);
+        System.out.println(changeObj.getName());//789
     }
 
+    /**
+     * 
+     * @Description: 浅copy
+     * @param sb void
+     */
     public static void change(StringObject sb) {
-        sb = new StringObject();
+        sb = new StringObject();//
         sb.setName("456");
+    }
+    
+    public static StringObject changeObj(StringObject sb) {
+        sb = new StringObject();//
+        sb.setName("789");
+        return sb;
     }
 
 }
+
+
 class StringObject {
+	
     String name;
 
     public String getName() {

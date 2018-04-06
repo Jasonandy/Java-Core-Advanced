@@ -30,12 +30,21 @@ package cn.ucaner.core.base.String;
 * @version    V1.0
  */
 public class StringT {
+	
     public static void main(String[] args) {
         String str = "123";
-        change(str);
+        change(str);//值传递 方法操作的是参数变量  改变的是原型变量的一个copy
         System.out.println(str);
+        str = "678";
+        System.out.println(str);
+        //123
+        //678
     }
 
+    /**
+     * @Description: change String 
+     * @param str void
+     */
     public static void change(String str) {
         str = "456";
     }

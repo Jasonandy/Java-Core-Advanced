@@ -30,13 +30,15 @@ import java.util.Arrays;
 * @version    V1.0
  */
 interface ProcessorInter {
+	
     String name();
-
     Object process(Object input);
 }
 
+// implement 1 
 class UpcaseImpl implements ProcessorInter {
-    @Override
+   
+	@Override
     public String name() {
         return this.getClass().getSimpleName();
     }
@@ -47,6 +49,7 @@ class UpcaseImpl implements ProcessorInter {
     }
 }
 
+// implement 2 
 class SplitcaseImpl implements ProcessorInter {
     @Override
     public String name() {
@@ -60,14 +63,20 @@ class SplitcaseImpl implements ProcessorInter {
 }
 
 public class ApplyInter {
+	
     public static void process(ProcessorInter p , Object input){
         System.out.println("调用对象名：" + p.name());
         System.out.println(p.process(input));
     }
 
-    public static String s = "BYSocket's Blog is www.bysocket.com";
+    public static String s = "My test website is javacore.ucaner.cn . just test for Jason.";
+    
     public static void main(String[] args) {
-        process(new UpcaseImpl(),s);
-        process(new SplitcaseImpl(),s);
+        process(new UpcaseImpl(),s);//转换为大写
+        process(new SplitcaseImpl(),s);//转换为数组
+       /*   调用对象名：UpcaseImpl
+        	MY TEST WEBSITE IS JAVACORE.UCANER.CN . JUST TEST FOR JASON.
+        	调用对象名：SplitcaseImpl
+            [My, test, website, is, javacore.ucaner.cn, ., just, test, for, Jason.]*/
     }
 }
