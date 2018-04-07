@@ -1,8 +1,24 @@
 package cn.ucaner.datastructure.BinarySearchTree;
 
+/**
+* @Package：cn.ucaner.datastructure.BinarySearchTree   
+* @ClassName：BinarySearchTree   
+* @Description：   <p> 树集合了数组（查找速度快）和链表（插入、删除速度快）的优点 </br> CSDN {@link https://blog.csdn.net/a19881029/article/details/24379339} </p>
+* 		二叉树是一种特殊的树，即：树中的每个节点最多只能有两个子节点
+* 		二叉搜索树是一种特殊的二叉树，即：节点的左子节点的值都小于这个节点的值，节点的右子节点的值都大于等于这个节点的值
+*   	Tips:如果树中允许存在重复数据，处理起来比较麻烦，故实现中不允许树中存在重复数据，即节点的右子节点的值必须大于节点的值.
+*   	搜索二叉树有一个特点，即如果使用中序遍历遍历搜索二叉树，将得到包含搜索二叉树中所有节点值的升序排序结果
+* @Author： - Jason   
+* @CreatTime：2018年4月7日 下午8:37:11   
+* @Modify By：   
+* @ModifyTime：  2018年4月7日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class BinarySearchTree {
 
-	private TreeNode root;
+	private TreeNode root;//定义树的根结点  
+	
 
 	/**
 	 * @description 根据已知序列构建二叉搜索树
