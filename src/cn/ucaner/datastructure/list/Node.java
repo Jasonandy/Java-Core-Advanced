@@ -9,7 +9,8 @@ package cn.ucaner.datastructure.list;
  */
  public class Node<T> {
 	//包可见性
-	Node<T> next;   
+	Node<T> next;
+	
 	T data;
 
 	/**

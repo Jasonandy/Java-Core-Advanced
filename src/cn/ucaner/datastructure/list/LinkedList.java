@@ -22,10 +22,11 @@ package cn.ucaner.datastructure.list;
 public class LinkedList<E> {
 
 	private Node<E> head; // 链表表头
+	
 	private int size; // 链表大小
 
 	public LinkedList() {
-		head = new Node<E>(null);
+		head = new Node<E>(null); //构造一个节点
 	}
 
 	public Node<E> getHead() {
