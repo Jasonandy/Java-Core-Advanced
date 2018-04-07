@@ -21,9 +21,20 @@
 ### nav
 > Java Core
 
-+ [core](./src/cn/ucaner/core)
++ [base](./src/cn/ucaner/core/base)
+  - [Java 深拷贝与浅拷贝](./src/cn/ucaner/core/base/copy/CopyT.java)
+  - [Java 接口](./src/cn/ucaner/core/base/inter)
+  - [Java String](./src/cn/ucaner/core/base/String)
 
-+ [core2](./core)
+
++ [collection](./src/cn/ucaner/core/collection)
+  - [hash](./src/cn/ucaner/core/collection/hash)
+  - [list](./src/cn/ucaner/core/collection/list)
+  - [map](./src/cn/ucaner/core/collection/map)
+  - [queue](./src/cn/ucaner/core/collection/queue)
+  - [set](./src/cn/ucaner/core/collection/set)
+  - [util](./src/cn/ucaner/core/collection/util)
+
 
 
 ###
