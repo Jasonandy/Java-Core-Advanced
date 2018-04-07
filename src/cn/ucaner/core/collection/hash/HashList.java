@@ -20,7 +20,7 @@ public class HashList {
     	// init data list
         List<SkuObj> reqSkuObjList = new ArrayList<>();
         List<SkuObj> existSkuObjList = new ArrayList<>();
-        for (int i = 0 ; i < 5000; i++) {
+        for (int i = 0 ; i < 1000; i++) {
             SkuObj skuObj = new SkuObj();
             skuObj.setId(i);
             skuObj.setName("name" + i);
@@ -29,7 +29,7 @@ public class HashList {
             reqSkuObjList.add(skuObj);
         }
 
-        for (int i = 0 ; i < 5000; i++) {
+        for (int i = 0 ; i < 1000; i++) {
             SkuObj skuObj = new SkuObj();
             skuObj.setId(i);
             skuObj.setName("nameexist" + i);
@@ -37,6 +37,9 @@ public class HashList {
             skuObj.setDesc("descexist" + i);
             existSkuObjList.add(skuObj);
         }
-
+        
+       // System.out.println(JSON.toJSONString(reqSkuObjList));
+       // System.out.println(JSON.toJSONString(existSkuObjList));
+        
     }
 }
