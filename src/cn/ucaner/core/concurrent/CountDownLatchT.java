@@ -9,7 +9,10 @@ import java.util.concurrent.TimeUnit;
 /**
 * @Package：cn.ucaner.core.concurrent   
 * @ClassName：CountDownLatchT   
-* @Description：   <p> 同步辅助类:完成一组线程执行前,使得一个或多个线程一直等待</p>
+* @Description：   
+* <p> 同步辅助类:完成一组线程执行前,使得一个或多个线程一直等待 </br> {@link https://www.cnblogs.com/cuglkb/p/8572239.html https://blog.csdn.net/yanyan19880509/article/details/52349056}
+* 
+* </p>
 * @Author： - bysocket   
 * @CreatTime：2018年4月5日 下午12:57:20   
 * @Modify By：   
@@ -18,9 +21,10 @@ import java.util.concurrent.TimeUnit;
 * @version    V1.0
  */
 public class CountDownLatchT {
-
+ 
     // 线程中止的计数器
     private final static int COUNT = 10;
+    
     private final static CountDownLatch count = new CountDownLatch(COUNT);
 
     // 线程池
