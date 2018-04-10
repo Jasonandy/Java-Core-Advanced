@@ -1,7 +1,25 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.generics;
 
+
 /**
- * 泛型方法
+* @Package：cn.ucaner.core.base.generics   
+* @ClassName：GenericMethods   
+* @Description：   <p> 泛型方法</p>
+* @Author： - Jason   
+* @CreatTime：2018年4月10日 下午9:22:41   
+* @Modify By：   
+* @ModifyTime：  2018年4月10日
+* @Modify marker：   
+* @version    V1.0
  */
 public class GenericMethods {
     public <T> void f(T x) {

@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.generics;
 
 //: generics/GenericReading.java
@@ -5,6 +14,17 @@ package cn.ucaner.core.base.generics;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+* @Package：cn.ucaner.core.base.generics   
+* @ClassName：GenericReading   
+* @Description：   <p> GenericReading</p>
+* @Author： - Jason   
+* @CreatTime：2018年4月10日 下午9:23:09   
+* @Modify By：   
+* @ModifyTime：  2018年4月10日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class GenericReading {
     static <T> T readExact(List<T> list) {
         return list.get(0);

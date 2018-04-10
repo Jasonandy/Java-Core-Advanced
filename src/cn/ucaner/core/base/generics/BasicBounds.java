@@ -1,5 +1,25 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.generics;
 
+/**
+* @Package：cn.ucaner.core.base.generics   
+* @ClassName：BasicBounds   
+* @Description：   <p> BasicBounds</p>
+* @Author： - Jason   
+* @CreatTime：2018年4月10日 下午9:17:00   
+* @Modify By：   
+* @ModifyTime：  2018年4月10日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class BasicBounds {
     public static void main(String[] args) {
         Solid<Bounded> solid =

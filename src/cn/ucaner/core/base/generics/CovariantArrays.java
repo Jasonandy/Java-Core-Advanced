@@ -1,7 +1,24 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.generics;
 
 /**
- * 通配符相关类的基础类
+* @Package：cn.ucaner.core.base.generics   
+* @ClassName：CovariantArrays   
+* @Description：   <p> 通配符相关类的基础类</p>
+* @Author： - Jason   
+* @CreatTime：2018年4月10日 下午9:19:11   
+* @Modify By：   
+* @ModifyTime：  2018年4月10日
+* @Modify marker：   
+* @version    V1.0
  */
 public class CovariantArrays {
     public static void main(String[] args) {
@@ -37,6 +54,6 @@ class Orange extends Fruit {
 }
 
 /* Output:
-java.lang.ArrayStoreException: Fruit
-java.lang.ArrayStoreException: Orange
+java.lang.ArrayStoreException: cn.ucaner.core.base.generics.Fruit
+java.lang.ArrayStoreException: cn.ucaner.core.base.generics.Orange
 *///:~

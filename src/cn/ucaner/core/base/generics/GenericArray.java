@@ -1,7 +1,24 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.generics;//: generics/GenericArray.java
 
 /**
- * 泛型数组
+* @Package：cn.ucaner.core.base.generics   
+* @ClassName：GenericArray   
+* @Description：   <p> 泛型数组</p>
+* @Author： - Jason   
+* @CreatTime：2018年4月10日 下午9:21:39   
+* @Modify By：   
+* @ModifyTime：  2018年4月10日
+* @Modify marker：   
+* @version    V1.0
  */
 public class GenericArray<T> {
     private T[] array;

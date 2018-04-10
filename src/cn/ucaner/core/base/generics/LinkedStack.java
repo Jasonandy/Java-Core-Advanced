@@ -1,7 +1,24 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.generics;
 
 /**
- * A stack implemented with an internal linked structure.
+* @Package：cn.ucaner.core.base.generics   
+* @ClassName：LinkedStack   
+* @Description：   <p> A stack implemented with an internal linked structure.</p>
+* @Author： - Jason   
+* @CreatTime：2018年4月10日 下午9:25:25   
+* @Modify By：   
+* @ModifyTime：  2018年4月10日
+* @Modify marker：   
+* @version    V1.0
  */
 public class LinkedStack<T> {
     private static class Node<U> {

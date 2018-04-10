@@ -1,7 +1,25 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994-2018. JasonInternational.</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.generics;
 
 /**
- * Exploring the meaning of wildcards.
+ * 
+* @Package：cn.ucaner.core.base.generics   
+* @ClassName：Wildcards   
+* @Description：   <p>  Exploring the meaning of wildcards.</p>
+* @Author： - Jason   
+* @CreatTime：2018年4月10日 下午9:24:40   
+* @Modify By：   
+* @ModifyTime：  2018年4月10日
+* @Modify marker：   
+* @version    V1.0
  */
 public class Wildcards {
     // Raw argument:
