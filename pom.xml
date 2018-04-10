@@ -14,6 +14,14 @@
   </properties>
   
   <dependencies>
+  
+    <!-- 163网易测试 -->
+	<dependency>
+           <groupId>javax.mail</groupId>
+           <artifactId>mail</artifactId>
+           <version>1.5.0-b01</version>
+       </dependency>
+       
   	<!-- springframework spring-core-->
     <dependency> 
       <groupId>org.springframework</groupId>  
