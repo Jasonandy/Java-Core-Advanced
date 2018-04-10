@@ -26,5 +26,13 @@ public class EnclosingOne {
         EnclosingOne eo = new EnclosingOne();
         InsideOne io = eo.new InsideOne();
         InsideTwo it = new InsideTwo();
+        System.out.println(eo);
+        System.out.println(io);
+        System.out.println(it);
     }
 }
+
+//out put 
+//cn.ucaner.core.base.innerclass.EnclosingOne@15db9742
+//cn.ucaner.core.base.innerclass.EnclosingOne$InsideOne@6d06d69c
+//cn.ucaner.core.base.innerclass.EnclosingOne$InsideTwo@7852e922
