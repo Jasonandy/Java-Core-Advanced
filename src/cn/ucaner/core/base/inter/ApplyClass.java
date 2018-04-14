@@ -57,7 +57,7 @@ public class ApplyClass {
         System.out.println(p.process(input));
     }
 
-    public static String s = "BYSocket's Blog is www.bysocket.com";
+    public static String s = "Jason's Blog is jasonandy.github.io !";
     public static void main(String[] args) {
         process(new Upcase(),s);
         process(new Splitcase(),s);
