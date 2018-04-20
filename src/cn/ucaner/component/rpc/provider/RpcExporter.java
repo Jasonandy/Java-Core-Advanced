@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.component.rpc.provider;
 
 import java.io.IOException;
@@ -13,7 +22,7 @@ import java.util.concurrent.Executors;
 /**
 * @Package：cn.ucaner.component.rpc.provider   
 * @ClassName：RpcExporter   
-* @Description：   <p> RPC服务发布者</p>
+* @Description：   <p> RPC服务发布者  负责导出（export）远程接口</p>
 * @Author： - Jason   
 * @CreatTime：2018年4月5日 下午12:09:38   
 * @Modify By：   
@@ -23,7 +32,7 @@ import java.util.concurrent.Executors;
  */
 public class RpcExporter {
 	
-    // 创建线程池
+    // 创建线程池 用来处理 客服端发送过来的二进制流数据
     static Executor executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     
@@ -61,7 +70,6 @@ public class RpcExporter {
             try {
                 // 对象输入流
                 input = new ObjectInputStream(client.getInputStream());
-
                 // 获取接口名
                 String interfaceName = input.readUTF();
                 // 获取方法名
@@ -73,13 +81,16 @@ public class RpcExporter {
 
                 // 获取服务对象类
                 Class<?> service = Class.forName(interfaceName);
+                
                 // 获取服务方法
                 Method method = service.getMethod(methodName,paramTypes);
-                // 获取服务方法返回对象
+                
+                // 获取服务方法返回对象  //so interfaces 接口应该的包全名 和 serviceImpl远程对应的要一致
                 Object result = method.invoke(service.newInstance(),arguments);
 
                 // 对象输出流
                 output = new ObjectOutputStream(client.getOutputStream());
+                
                 output.writeObject(result);
 
             } catch (Exception e) {

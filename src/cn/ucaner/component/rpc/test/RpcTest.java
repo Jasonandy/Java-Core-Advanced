@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.component.rpc.test;
 
 import java.io.IOException;
@@ -22,7 +31,15 @@ import cn.ucaner.component.rpc.service.impl.EchoServiceImpl;
 public class RpcTest {
 	
     public static void main(String[] args) {
-        // 启动服务提供者
+    	
+    	
+    	/**
+    	 * 启动服务提供者 
+    	 * 
+    	 * 同步阻塞 
+    	 * 
+    	 * opts. netty NIO 
+    	 */
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -34,11 +51,28 @@ public class RpcTest {
             }
         }).start();
 
-        // 创建服务本地代理
-        RpcImporter<EchoService> importer = new RpcImporter<>();
+        
+        // follow code can opts. by 注册发现   add base on like dubbo protocol
+        
+        /**
+         * 创建服务本地代理
+         * 
+         * 导出服务接口  EchoService
+         */
+        RpcImporter<EchoService> importer = new RpcImporter<EchoService>();
 
-        // 从服务本地代理获取服务对象类
+        /**
+         * 从服务本地代理获取服务对象类
+         * 
+         * 获取接口（假想为远程的服务impl）
+         */
         EchoService echo = importer.importer(EchoServiceImpl.class,new InetSocketAddress("localhost",8088));
+        
+        System.out.println(echo.echo(null));
         System.out.println(echo.echo("Are you OK?"));
+        System.out.println(echo.helloWorld());//远程实现
     }
 }
+//Output
+//I am ok.
+//Are you OK? --> I am ok.

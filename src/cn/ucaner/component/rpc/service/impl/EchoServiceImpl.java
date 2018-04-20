@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.component.rpc.service.impl;
 
 import cn.ucaner.component.rpc.service.EchoService;
@@ -21,6 +30,16 @@ public class EchoServiceImpl implements EchoService {
 		
         return ping != null ? ping + " --> I am ok." : "I am ok.";
     }
+
+	/**
+	 * 假设有A B 系统 , 当前 B为A提供服务 , B服务实现  ,当前属于B端, 被A端RPC远程调用
+	 * 
+	 * 假装远程接口的实现类.  
+	 */
+	@Override
+	public String helloWorld() {
+		return "HelloWorld Rpc .  \r  -- Hi. I'am Jason .  \r   - thks. ";
+	}
 	
 	
 }

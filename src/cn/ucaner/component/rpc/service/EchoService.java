@@ -1,9 +1,8 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 1994-2018 JasonInternation.</p>
- *  <p> All rights reserved.</p>
- *  <p> Created on 2018年4月5日</p>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
  *  <p> Created by Jason</p>
  *  </body>
  * </html>
@@ -29,5 +28,13 @@ public interface EchoService {
 	 * @return String
 	 */
 	public String echo(String ping);
+	
+	
+	/**
+	 * @Description: 定义接口（服务）    --- 远程impl 实现  - [tips: package need same.]
+	 * @return String
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
+	public String helloWorld();
 	
 }
