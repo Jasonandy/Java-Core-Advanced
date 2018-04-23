@@ -24,10 +24,25 @@ public class SearchTest {
 
 	public static void main(String[] args) {    
         //Search search = SearchFactory.newSearch();    
-        //search.serch("cn.ucaner.core.spi.SearchTest");  
+        //search.serch("serch");  
         ServiceLoader<Search> loaders = ServiceLoader.load(Search.class);
         for (Search s : loaders) {
             s.echo();
+            String ping = s.ping("Spi");
+            System.out.println(ping);
         }
+        System.out.println(loaders.toString());
     }    
 }
+//Output放置位置为src
+//HelloWorld!
+//Spi  > Hi I'm Spi.
+//java.util.ServiceLoader[cn.ucaner.core.spi.Search]
+
+
+//add other spiImpl Result
+//HelloWorld!
+//Spi  > Hi I'm Spi.
+//cn.ucaner.core.spi.impl.SearchOtherImpl
+//Spi  > Hi I'm Other Spi.
+//java.util.ServiceLoader[cn.ucaner.core.spi.Search]

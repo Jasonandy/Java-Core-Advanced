@@ -15,14 +15,14 @@ import cn.ucaner.core.spi.Search;
 
 /**     
  * @Package：cn.ucaner.core.spi.impl   
- * @ClassName：SearchImpl   
- * @Description：   <p> SearchImpl spi 接口的具体实现 </p>
+ * @ClassName：SearchOtherImpl   
+ * @Description：   <p> SearchOtherImpl spi 接口的具体实现 </p>
  * @Author： - Jason   
  * @Modify By：   
  * @Modify marker：   
  * @version    V1.0
  */
-public class SearchImpl implements Search{
+public class SearchOtherImpl implements Search{
 
 	@Override
 	public List<?> serch(String keyword) {
@@ -31,12 +31,12 @@ public class SearchImpl implements Search{
 
 	@Override
 	public void echo() {
-		System.out.println("HelloWorld!");
+		System.out.println(this.getClass().getCanonicalName());
 	}
-
+	
 	@Override
 	public String ping(String cmd) {
-		return cmd ==null?"Null this is Spi.":cmd+"  > Hi I'm Spi.";
+		return cmd ==null?"Null this is Other Spi.":cmd+"  > Hi I'm Other Spi.";
 	}
 
 }

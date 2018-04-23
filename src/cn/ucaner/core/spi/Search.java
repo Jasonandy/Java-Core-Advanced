@@ -23,7 +23,25 @@ import java.util.List;
  */
 public interface Search {
 
+	/**
+	 * @Description: serch
+	 * @param keyword
+	 * @return List<?>
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	public List<?> serch(String keyword);
 	
+	/**
+	 * @Description: echo
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	void echo();
+	
+	/**
+	 * @Description: ping
+	 * @param cmd
+	 * @return String
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
+	public String  ping(String cmd);
 }
