@@ -20,7 +20,7 @@ import cn.ucaner.component.rpc.service.impl.EchoServiceImpl;
 /**
 * @Package：cn.ucaner.component.rpc.test   
 * @ClassName：RpcTest   
-* @Description：   <p> RPC测试代码类 </p>
+* @Description：   <p> RPC测试代码类   对象序列化协议  和 调用控制协议</p>
 * @Author： - Jason   
 * @CreatTime：2018年4月5日 下午12:11:46   
 * @Modify By：   
@@ -30,6 +30,11 @@ import cn.ucaner.component.rpc.service.impl.EchoServiceImpl;
  */
 public class RpcTest {
 	
+	
+	/**
+	 * @Description: Rpc两个协议:  对象序列化协议  和 调用控制协议
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
     public static void main(String[] args) {
     	
     	
