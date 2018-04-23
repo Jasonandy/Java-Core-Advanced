@@ -10,22 +10,31 @@
  */
 package cn.ucaner.algorithm.KMP;
 
+/**
+* @Package：cn.ucaner.algorithm.KMP   
+* @ClassName：KMP   
+* @Description：   <p> https://blog.csdn.net/yutianzuijin/article/details/11954939/ </p>
+* @Author： - Jason   
+* @CreatTime：2018年4月23日 下午8:34:50   
+* @Modify By：   
+* @ModifyTime：  2018年4月23日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class KMP {
-	public static int[] preProcess(char[] B)
-	{
+	
+	public static int[] preProcess(char[] B){
 		int size = B.length;
 		int[] P = new int[size];
 		P[0] = 0;
 		int j = 0;
-		
-		for(int i=1;i<size;i++)
-		{
-			while(j>0 && B[j]!=B[i])
-			{
+		//KMP中的核心算法，获得记录跳转状态的next数组
+		for(int i=1;i<size;i++){//i表示字符串的下标，从0开始  
+			//j在每次循环开始都表示next[i]的值，同时也表示需要比较的下一个位置  
+			while(j>0 && B[j]!=B[i]){
 				j = P[j];
 			}
-			if(B[j] == B[i])
-			{
+			if(B[j] == B[i]){
 				j++;
 			}
 			P[i] = j;
@@ -33,8 +42,7 @@ public class KMP {
 		return P;
 	}
 	
-	public static void kmp(String parStr,String subStr)
-	{
+	public static void kmp(String parStr,String subStr){
 		int subSize = subStr.length();
 		int parSize = parStr.length();
 		char[] B = subStr.toCharArray();
@@ -68,8 +76,7 @@ public class KMP {
 		System.out.printf("Totally found %d times for '%s'.\n", k,subStr);
 	}
 	
-	public static void main(String[] args)
-	{
-		kmp("asdfhkasdsafabcabcdefasdfhasdf", "abcabcdef");
+	public static void main(String[] args){
+		kmp("ssdfafafadsgfasfrsafasabcgdsdgdasgasg", "abc");
 	}
 }
