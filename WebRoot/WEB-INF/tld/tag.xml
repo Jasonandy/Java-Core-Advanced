@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+  
+<taglib>
+	
+	<!-- tlib 全局信息  -->
+	<tlib-version>1.0</tlib-version><!-- 代表标签库的版本号 -->
+	<jsp-version>1.2</jsp-version><!-- 代表jsp的版本 -->
+	<short-name>ucaner</short-name><!-- 你的标签库的简称 -->
+	<uri>http://tag.ucaner.cn/jason</uri><!-- 你标签库的引用uri -->
+  
+  	<!-- 自定义标签对 -->
+	<tag>
+		<name>tag</name><!-- 你定义的标签的名称 -->
+		 <tag-class>cn.ucaner.core.tag.custag.MyTag</tag-class><!-- 对应的标签处理程序：包名+类名 -->
+		<body-content>JSP</body-content><!-- 标签体内容的格式 -->
+	</tag>
+  
+ </taglib>
