@@ -54,3 +54,10 @@ public class MapTest3
 		}   
 	}
 }
+//Outputs
+//Map m's size :2
+//Map m's size :2
+//key:Person [id=1, name=name1]
+//value:person1
+//key:Person [id=1, name=name2]
+//value:person2

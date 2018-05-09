@@ -33,4 +33,13 @@ public class LinearSearch {
         }
         return Integer.MAX_VALUE;
     }
+    
+    //Just for test
+    public static void main(String[] args) {
+		int[] nums = {1,2,3,4,5,6,7,8,9,0};
+		int finds = 8;
+		System.out.printf("数字:%d 在数组中的位置为:%d %n", finds,find(2, nums)+1);  
+	}
 }
+//Outputs 
+//数字:8 在数组中的位置为:2 

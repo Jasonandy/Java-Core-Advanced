@@ -41,3 +41,7 @@ public class MapTest1 {
 		}   
 	}
 }
+//Outputs
+//Map m's size :1
+//key:Person [id=1, name=name1]
+//value:person2

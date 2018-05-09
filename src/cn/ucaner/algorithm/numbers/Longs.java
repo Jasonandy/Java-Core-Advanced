@@ -12,6 +12,17 @@ package cn.ucaner.algorithm.numbers;
 
 import java.math.BigDecimal;
 
+/**
+* @Package：cn.ucaner.algorithm.numbers   
+* @ClassName：Longs   
+* @Description：   <p> Longs </p>
+* @Author： - Jason   
+* @CreatTime：2018年5月9日 上午9:25:11   
+* @Modify By：   
+* @ModifyTime：  2018年5月9日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Longs {
 
     public static final String toBinaryUsingDivideAndModulus(long numberToConvert) {

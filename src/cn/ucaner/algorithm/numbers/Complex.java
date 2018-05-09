@@ -20,6 +20,17 @@ package cn.ucaner.algorithm.numbers;
  * @author Mateusz Cianciara <e.cianciara@gmail.com>
  * @author Justin Wetherell <phishman3579@gmail.com>
  */
+/**
+* @Package：cn.ucaner.algorithm.numbers   
+* @ClassName：Complex   
+* @Description：   <p> 复数</p>
+* @Author： - Jason   
+* @CreatTime：2018年5月9日 上午9:20:22   
+* @Modify By：   
+* @ModifyTime：  2018年5月9日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Complex {
 
     public double real;

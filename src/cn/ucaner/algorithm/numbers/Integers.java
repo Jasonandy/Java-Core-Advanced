@@ -14,6 +14,17 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+* @Package：cn.ucaner.algorithm.numbers   
+* @ClassName：Integers   
+* @Description：   <p> Integers </p>
+* @Author： - Jason   
+* @CreatTime：2018年5月9日 上午9:20:45   
+* @Modify By：   
+* @ModifyTime：  2018年5月9日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Integers {
 
     private static final BigDecimal ZERO = new BigDecimal(0);
@@ -153,6 +164,12 @@ public class Integers {
     private static final int HUNDRED = 100;
     private static final int TEN = 10;
 
+    /**
+     * @Description: handleUnderOneThousand
+     * @param number
+     * @return String
+     * @Autor: jason - jasonandy@hotmail.com
+     */
     private static final String handleUnderOneThousand(int number) {
         StringBuilder builder = new StringBuilder();
         int x = number;
@@ -181,6 +198,12 @@ public class Integers {
         return builder.toString();
     }
 
+    /**
+     * @Description: 数字转英文
+     * @param number
+     * @return String
+     * @Autor: jason - jasonandy@hotmail.com
+     */
     public static final String toEnglish(int number) {
         int x = number;
         if (x>Integer.MAX_VALUE || x<=Integer.MIN_VALUE) throw new IllegalArgumentException("Number has to be <= Integer.MAX_VALUE and > Integer.MIN_VALUE. number="+x);
@@ -222,4 +245,11 @@ public class Integers {
         builder.append(handleUnderOneThousand(x));
         return builder.toString();
     }
+    
+    //Just for test 
+    public static void main(String[] args) {
+		System.out.println(toEnglish(110086));//数字转英文  //one-hundred ten-thousand eighty-six
+		System.out.println(toBinaryUsingDivideAndDouble(12306)); //11000000010010   十进制转二进制
+		System.out.println(toBinaryUsingDivideAndDouble(5)); //101  十进制转二进制
+	}
 }
