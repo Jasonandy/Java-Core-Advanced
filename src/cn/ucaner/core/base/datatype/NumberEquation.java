@@ -12,6 +12,7 @@ package cn.ucaner.core.base.datatype;
 * @version    V1.0
  */
 public class NumberEquation {
+	
     public static void main(String[] args) {
         Integer i = 42;
         Long l = 42l;

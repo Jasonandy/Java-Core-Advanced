@@ -13,15 +13,18 @@ package cn.ucaner.core.base.constructor;
 * @version    V1.0
  */
 public class FatherClass {
-    protected static int count = 10;
-    private String name;
+	
+    protected static int count = 10;//父类count 10 
+    
+    @SuppressWarnings("unused")
+	private String name;
 
     static {
-        System.out.println("父类的静态属性count初始化:" + count);
+        System.out.println("父类的静态属性count初始化:" + count);  // 1 - 父类的静态属性count初始化:10
     }
 
     public FatherClass() {
-        System.out.println("执行了父类的无参构造方法");
+        System.out.println("执行了父类的无参构造方法");//4-执行了父类的无参构造方法 5-执行了父类的无参构造方法
     }
 
     public FatherClass(String name) {

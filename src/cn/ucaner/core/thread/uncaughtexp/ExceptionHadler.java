@@ -14,6 +14,7 @@ import java.lang.Thread.UncaughtExceptionHandler;
 * @version    V1.0
  */
 public class ExceptionHadler implements UncaughtExceptionHandler{
+	
     @Override
     public void uncaughtException(Thread t, Throwable e) {
         System.out.printf("An exception has been captured\n");

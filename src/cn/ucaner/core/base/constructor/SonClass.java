@@ -17,17 +17,17 @@ public class SonClass extends FatherClass {
     private static int countSon;
 
     static {
-        System.out.println("子类可以访问父类的静态属性count " + count);
-        System.out.println("子类的静态属性countSon初始化:" + countSon);
+        System.out.println("子类可以访问父类的静态属性count " + count);//2- 子类可以访问父类的静态属性count 10
+        System.out.println("子类的静态属性countSon初始化:" + countSon);//3- 子类的静态属性countSon初始化:0
     }
 
     public SonClass(String name) {
         //super(name);
-        System.out.println("执行了子类的构造方法SonClass(String name) " + name);
+        System.out.println("执行了子类的构造方法SonClass(String name) " + name);//5-执行了子类的构造方法SonClass(String name) aaa
     }
 
     public SonClass() {
-        System.out.println("执行了子类的无参构造方法");
+        System.out.println("执行了子类的无参构造方法");// last - 执行了子类的无参构造方法
     }
 
     public static void main(String[] args) {

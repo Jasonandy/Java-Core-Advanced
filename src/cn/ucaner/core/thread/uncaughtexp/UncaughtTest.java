@@ -12,6 +12,7 @@ package cn.ucaner.core.thread.uncaughtexp;
 * @version    V1.0
  */
 public class UncaughtTest {
+	
     public static void main(String[] args) {
         UncaughtTask uncaughtTask = new UncaughtTask();
         Thread thread = new Thread(uncaughtTask);
@@ -19,3 +20,16 @@ public class UncaughtTest {
         thread.start();
     }
 }
+
+//Outputs
+//An exception has been captured
+//Thread: 10
+//Exception: java.lang.NumberFormatException: For input string: "TTTT"
+//Stack Trace: 
+//java.lang.NumberFormatException: For input string: "TTTT"
+//	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+//	at java.lang.Integer.parseInt(Integer.java:580)
+//	at java.lang.Integer.parseInt(Integer.java:615)
+//	at cn.ucaner.core.thread.uncaughtexp.UncaughtTask.run(UncaughtTask.java:19)
+//	at java.lang.Thread.run(Thread.java:745)
+//Thread status: RUNNABLE

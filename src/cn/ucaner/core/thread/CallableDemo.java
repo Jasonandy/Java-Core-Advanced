@@ -57,6 +57,7 @@ class TaskWithResult implements Callable<String> {
 }
 
 public class CallableDemo {
+	
     public static void main(String[] args) {
         // 创建一个新的线程池
         ExecutorService exec = Executors.newCachedThreadPool();
@@ -81,3 +82,9 @@ public class CallableDemo {
             }
     }
 }
+//Outputs
+//result of TaskWithResult 0
+//result of TaskWithResult 1
+//result of TaskWithResult 2
+//result of TaskWithResult 3
+//result of TaskWithResult 4

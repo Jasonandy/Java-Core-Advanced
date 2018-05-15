@@ -12,8 +12,10 @@ package cn.ucaner.core.thread.uncaughtexp;
 * @version    V1.0
  */
 public class UncaughtTask implements Runnable {
+	
     @Override
     public void run() {
-        int numero = Integer.parseInt("TTTT");
+        @SuppressWarnings("unused")
+		int numero = Integer.parseInt("TTTT");
     }
 }

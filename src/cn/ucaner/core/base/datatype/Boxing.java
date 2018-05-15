@@ -12,7 +12,9 @@ package cn.ucaner.core.base.datatype;
 * @version    V1.0
  */
 public class Boxing {
-    public static void main(String[] args) {
+	
+    @SuppressWarnings("unlikely-arg-type")
+	public static void main(String[] args) {
         Integer a = 1;
         Integer b = 2;
         Integer c = 3;
@@ -20,13 +22,13 @@ public class Boxing {
         Integer e = 321;
         Integer f = 321;
         Long g = 3L;
-        System.out.println(c == d);
-        System.out.println(e == f);
-        System.out.println(c == (a + b));
-        System.out.println(c.equals(a + b));
-        System.out.println(g == (a + b));
-        System.out.println(g.equals(a + b));
-        System.out.println(new Integer(2) == new Integer(2));
+        System.out.println(c == d);//true                自动装箱,缓存
+        System.out.println(e == f);//false               自动装箱,未缓存
+        System.out.println(c == (a + b));//true
+        System.out.println(c.equals(a + b));//true       调用 equals(),比较的是值,而不是对象地址
+        System.out.println(g == (a + b));//true
+        System.out.println(g.equals(a + b));//false
+        System.out.println(new Integer(2) == new Integer(2));//false   比较的是对象地址
 
     }
 }

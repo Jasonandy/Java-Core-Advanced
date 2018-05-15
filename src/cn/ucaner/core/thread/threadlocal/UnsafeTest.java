@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 * @version    V1.0
  */
 public class UnsafeTest {
+	
     public static void main(String[] args) {
         UnsafeTask task = new UnsafeTask();
         for (int i = 0 ; i < 10; i++) {
@@ -28,3 +29,17 @@ public class UnsafeTest {
         }
     }
 }
+//Outputs
+//Starting Thread:10 : Tue May 15 09:29:48 CST 2018
+//Starting Thread:11 : Tue May 15 09:29:50 CST 2018
+//Finish Thread:10 : Tue May 15 09:29:50 CST 2018
+//Starting Thread:12 : Tue May 15 09:29:52 CST 2018
+//Finish Thread:12 : Tue May 15 09:29:52 CST 2018
+//Starting Thread:13 : Tue May 15 09:29:54 CST 2018
+//Finish Thread:11 : Tue May 15 09:29:54 CST 2018
+//Starting Thread:14 : Tue May 15 09:29:56 CST 2018
+//Starting Thread:15 : Tue May 15 09:29:58 CST 2018
+//Starting Thread:16 : Tue May 15 09:30:00 CST 2018
+//Finish Thread:16 : Tue May 15 09:30:00 CST 2018
+//Finish Thread:14 : Tue May 15 09:30:00 CST 2018
+//Starting Thread:17 : Tue May 15 09:30:02 CST 2018

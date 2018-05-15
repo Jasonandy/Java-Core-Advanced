@@ -40,3 +40,7 @@ public class IntegerChanger {
 
     }
 }
+//Outputs 
+//before swap a = 1, b = 2
+//after swap a = 2, b = 1
+//(警告:Integer缓存被改了,代码里:Integer c = 1;) 实际c=2
