@@ -54,5 +54,17 @@ public class CountDownLatchT {
 
     }
 }
+//Outputs
+//Thread 12 ## 耗时:0
+//Thread 10 ## 耗时:1
+//Thread 10 ## 耗时:0
+//Thread 12 ## 耗时:1
+//Thread 12 ## 耗时:0
+//Thread 14 ## 耗时:2
+//Thread 10 ## 耗时:2
+//Thread 13 ## 耗时:4
+//Thread 11 ## 耗时:4
+//Thread 12 ## 耗时:4
+//同步线程执行组结束!
 
 

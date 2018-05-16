@@ -5,7 +5,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Using a Thread Factory to create daemons.
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：DaemonFromFactory   
+* @Description：   <p> DaemonFromFactory   -- Using a Thread Factory to create daemons.</p>
+* @Author： - Jason   
+* @CreatTime：2018年5月16日 下午6:16:08   
+* @Modify By：   
+* @ModifyTime：  2018年5月16日
+* @Modify marker：   
+* @version    V1.0
  */
 public class DaemonFromFactory implements Runnable {
     public void run() {

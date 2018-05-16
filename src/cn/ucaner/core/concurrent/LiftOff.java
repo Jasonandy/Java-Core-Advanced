@@ -1,10 +1,22 @@
 package cn.ucaner.core.concurrent;
 
-
-
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：LiftOff   
+* @Description：   <p> LiftOff 启动起飞</p>
+* @Author： - wubin   
+* @CreatTime：2018年5月16日 下午6:05:59   
+* @Modify By：   
+* @ModifyTime：  2018年5月16日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class LiftOff implements Runnable {
+	
     protected int countDown = 10;
+    
     private static int taskCount = 0;
+    
     private final int id = taskCount++;
 
     public LiftOff() {

@@ -4,7 +4,19 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：CaptureUncaughtException   
+* @Description：   <p> 捕捉异常</p>
+* @Author： - Jason
+* @CreatTime：2018年5月16日 下午6:10:37   
+* @Modify By：   
+* @ModifyTime：  2018年5月16日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class CaptureUncaughtException {
+	
     public static void main(String[] args) {
         ExecutorService exec = Executors.newCachedThreadPool(
                 new HandlerThreadFactory());

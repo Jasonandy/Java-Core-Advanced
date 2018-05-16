@@ -9,8 +9,11 @@ import java.util.concurrent.Future;
 
 
 public class CallableDemo {
+	
     public static void main(String[] args) {
+    	
         ExecutorService exec = Executors.newCachedThreadPool();
+        
         ArrayList<Future<String>> results = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
@@ -45,3 +48,14 @@ class TaskWithResult implements Callable<String> {
         return "result of TaskWithResult  " + id;
     }
 }
+//Outputs
+//result of TaskWithResult  0
+//result of TaskWithResult  1
+//result of TaskWithResult  2
+//result of TaskWithResult  3
+//result of TaskWithResult  4
+//result of TaskWithResult  5
+//result of TaskWithResult  6
+//result of TaskWithResult  7
+//result of TaskWithResult  8
+//result of TaskWithResult  9

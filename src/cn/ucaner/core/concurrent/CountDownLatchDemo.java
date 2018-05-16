@@ -6,7 +6,20 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：CountDownLatchDemo   
+* @Description：   <p> CountDownLatchDemo </p>
+* @Author： -    
+* @CreatTime：2018年5月16日 下午6:14:49   
+* @Modify By：   
+* @ModifyTime：  2018年5月16日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class CountDownLatchDemo {
+	
+	
     static final int SIZE = 10;
 
     public static void main(String[] args) throws Exception {
@@ -78,4 +91,35 @@ class WaitingTask implements Runnable {
     }
 }
 
-/* (Execute to see output) *///:~
+//Outputs
+//Launched all tasks
+//7   completed
+//9   completed
+//5   completed
+//8   completed
+//1   completed
+//2   completed
+//6   completed
+//4   completed
+//0   completed
+//3   completed
+//3    TaskPortion after await
+//Latch barrier passed for WaitingTask 0   
+//Latch barrier passed for WaitingTask 1   
+//Latch barrier passed for WaitingTask 2   
+//Latch barrier passed for WaitingTask 3   
+//Latch barrier passed for WaitingTask 4   
+//Latch barrier passed for WaitingTask 5   
+//Latch barrier passed for WaitingTask 7   
+//Latch barrier passed for WaitingTask 6   
+//Latch barrier passed for WaitingTask 8   
+//Latch barrier passed for WaitingTask 9   
+//7    TaskPortion after await
+//9    TaskPortion after await
+//8    TaskPortion after await
+//1    TaskPortion after await
+//5    TaskPortion after await
+//2    TaskPortion after await
+//6    TaskPortion after await
+//0    TaskPortion after await
+//4    TaskPortion after await
