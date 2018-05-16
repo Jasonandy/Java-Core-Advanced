@@ -155,7 +155,6 @@ public class LinkedStack<E> {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		Node<E> index = top;
 		StringBuilder sb = new StringBuilder();
 		while (index != null) {

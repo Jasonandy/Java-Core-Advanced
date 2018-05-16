@@ -12,7 +12,9 @@ package cn.ucaner.jvm.methodinvoke;
 /**
 * @Package：cn.ucaner.jvm.methodinvoke   
 * @ClassName：Dispatch   
-* @Description：   <p> 单分派、多分派演示</p>
+* @Description：   <p> 单分派、多分派演示
+* https://www.cnblogs.com/roilat/articles/3830245.html
+* </p>
 * @Author： - Jason   
 * @CreatTime：2018年4月10日 下午10:03:01   
 * @Modify By：   
