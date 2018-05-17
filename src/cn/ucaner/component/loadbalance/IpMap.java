@@ -8,7 +8,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.datastructure.loadbalance;
+package cn.ucaner.component.loadbalance;
 
 import java.util.HashMap;
 
@@ -18,7 +18,7 @@ import java.util.HashMap;
 * @Description：   <p> IpMap 
 * https://www.cnblogs.com/szlbm/p/5588555.html
 * </p>
-* @Author： - Jasom   
+* @Author： - Jason   
 * @CreatTime：2018年5月16日 下午8:00:17   
 * @Modify By：   
 * @ModifyTime：  2018年5月16日

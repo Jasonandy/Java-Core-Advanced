@@ -8,7 +8,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.datastructure.loadbalance;
+package cn.ucaner.component.loadbalance;
 
 import java.util.ArrayList;
 import java.util.HashMap;
