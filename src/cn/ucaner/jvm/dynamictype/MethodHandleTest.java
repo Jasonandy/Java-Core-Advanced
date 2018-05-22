@@ -26,6 +26,7 @@ import java.lang.invoke.MethodType;
 * @version    V1.0
  */
 public class MethodHandleTest {
+	
     static class ClassA {
         public void println(String s) {
             System.out.println("classA " + s);

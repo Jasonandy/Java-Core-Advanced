@@ -14,7 +14,7 @@ package cn.ucaner.jvm.memory;
 * @Package：cn.ucaner.jvm.memory   
 * @ClassName：JavaVMStackSOF   
 * @Description：   <p> 虚拟机栈和本地方法栈 OOM 测试 </br>VM Args: -Xss256k </p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午10:01:24   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

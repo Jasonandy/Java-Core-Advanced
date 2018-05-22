@@ -18,7 +18,7 @@ package cn.ucaner.jvm.classloading;
 * <br/>(-XX:+TraceClassLoading,对于 HotSpot 虚拟机可观察到子类的加载)
 * 
 * </p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午9:53:05   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

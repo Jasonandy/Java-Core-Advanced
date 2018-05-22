@@ -24,6 +24,7 @@ import java.io.InputStream;
 * @version    V1.0
  */
 public class ClassLoaderTest {
+	
     public static void main(String[] args) throws Exception {
         ClassLoader myLoader = new ClassLoader() {
             @Override
@@ -49,5 +50,5 @@ public class ClassLoaderTest {
     }
 }
 
-//outPut
+//Outputs
 //class cn.ucaner.jvm.classloading.ClassLoaderTest

@@ -13,7 +13,7 @@ package cn.ucaner.jvm.memory;
 * @Package：cn.ucaner.jvm.memory   
 * @ClassName：JavaVMStackOOM   
 * @Description：   <p> 创建线程导致内存溢出异常 </br> VM Args: -Xss2M </p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午10:01:01   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

@@ -13,7 +13,7 @@ package cn.ucaner.jvm.classloading;
 * @Package：cn.ucaner.jvm.classloading   
 * @ClassName：FieldResolution   
 * @Description：   <p> 字段解析 </br>如果注释了 Sub 类中的 "public static int A = 4",会编译错误 </p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午9:52:16   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

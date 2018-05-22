@@ -14,10 +14,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 运行时常量池导致的内存溢出异常
- * VM Args: -XX:PermSize=10M -XX:MaxPermSize=10M
- *
- * 这两个配置项在 JDK 1.8 已经不支持了
+* @Package：cn.ucaner.jvm.memory   
+* @ClassName：RuntimeConstantPoolOOM   
+* @Description：   <p> 运行时常量池导致的内存溢出异常
+* VM Args: -XX:PermSize=10M -XX:MaxPermSize=10M
+* 这两个配置项在 JDK 1.8 已经不支持了
+* </p>
+* @Author： - wubin   
+* @CreatTime：2018年5月22日 上午9:26:02   
+* @Modify By：   
+* @ModifyTime：  2018年5月22日
+* @Modify marker：   
+* @version    V1.0
  */
 public class RuntimeConstantPoolOOM {
     public static void main(String[] args) {

@@ -9,15 +9,15 @@
  */
 package cn.ucaner.jvm.memory;
 
-import sun.misc.Unsafe;
-
 import java.lang.reflect.Field;
+
+import sun.misc.Unsafe;
 
 /**
 * @Package：cn.ucaner.jvm.memory   
 * @ClassName：DirectMemoryOOM   
 * @Description：   <p> 使用 unsafe 分配本机内存   VM Args: -Xmx20M -XX:MaxDirectMemorySize=10M</p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午9:58:31   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

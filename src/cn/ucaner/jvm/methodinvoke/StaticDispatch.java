@@ -13,7 +13,7 @@ package cn.ucaner.jvm.methodinvoke;
 * @Package：cn.ucaner.jvm.methodinvoke   
 * @ClassName：StaticDispatch   
 * @Description：   <p> 方法静态分派演示 </br> Method Overload Resolution</p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午10:04:08   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

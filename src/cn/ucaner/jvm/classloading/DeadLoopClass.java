@@ -15,7 +15,7 @@ package cn.ucaner.jvm.classloading;
 * @Description：   <p> 字段解析
 * </br> 多个线程同时初始化一个类,只有一个线程会执行 <clinit>()方法,其他被阻塞
 * </p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午9:51:17   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

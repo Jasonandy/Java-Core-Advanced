@@ -21,7 +21,7 @@ import java.lang.invoke.MethodType;
 * @Package：cn.ucaner.jvm.dynamictype   
 * @ClassName：InvokeDynamicTest   
 * @Description：   <p> invokedynamic   指令演示</p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午9:56:13   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

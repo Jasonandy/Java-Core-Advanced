@@ -13,7 +13,7 @@ package cn.ucaner.jvm.gc;
 * @Package：cn.ucaner.jvm.gc   
 * @ClassName：FinalizeEscapeGC   
 * @Description：   <p> 对象可以在被 GC 时自我拯救 </br> 这种自救的机会只有一次,因为一个对象的 finalize() 方法最多只会被系统自动调用一次</p>
-* @Author： - DaoDou   
+* @Author： -    
 * @CreatTime：2018年4月10日 下午9:57:18   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日
