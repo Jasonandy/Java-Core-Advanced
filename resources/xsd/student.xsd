@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="cn.ucaner.xsd.student" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="student.ucaner.cn">
+
+  <xs:import namespace="student.ucaner.cn" schemaLocation="student.xsd"/>
+
+  <xs:element name="student" type="ns1:student"/>
+
+</xs:schema>
+
