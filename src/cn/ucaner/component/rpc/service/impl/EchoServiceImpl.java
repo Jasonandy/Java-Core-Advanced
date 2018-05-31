@@ -38,7 +38,7 @@ public class EchoServiceImpl implements EchoService {
 	 */
 	@Override
 	public String helloWorld() {
-		return "HelloWorld Rpc .  \r  -- Hi. I'am Jason .  \r   - thks. ";
+		return "HelloWorld Rpc .  \r  -- Hi. I'am Jason .  \r  -- thks. ";
 	}
 	
 	
