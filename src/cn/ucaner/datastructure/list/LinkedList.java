@@ -1,7 +1,7 @@
 package cn.ucaner.datastructure.list;
 
 /**
- * Title: 链表的Java实现 
+ * Title: 
  * Description: 链表结构包含两个要素： 头结点head + 链表大小size，操作包括：
  * 				链表的增删
  * 				链表是否为空
@@ -19,14 +19,50 @@ package cn.ucaner.datastructure.list;
  * 
  * @author rico
  */
+/**
+* @Package：cn.ucaner.datastructure.list   
+* @ClassName：LinkedList   
+* @Description：   <p> 链表的Java实现  </p>
+* 链表结构包含两个要素： 头结点head + 链表大小size，操作包括：
+* 			链表的增删
+* 			链表是否为空
+* 			链表的大小
+* 			链表的打印输出
+* 			删除链表重复节点
+*  			链表倒数第K个元素
+*  			链表的反转
+*  			链表的倒序输出
+*  			链表的中间节点
+*  			链表是否有环
+*  			链表节点的删除(不知道头结点的情况下)
+*  			链表是否相交
+*  			链表的交点
+* @Author： -    
+* @CreatTime：2018年6月8日 上午10:52:45   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class LinkedList<E> {
 
-	private Node<E> head; // 链表表头
+	/**
+	 * 链表表头
+	 */
+	private Node<E> head; 
 	
-	private int size; // 链表大小
+	/**
+	 *  链表大小
+	 */
+	private int size; 
 
+	
+	/**
+	 * 构造一个节点
+	* LinkedList.
+	 */
 	public LinkedList() {
-		head = new Node<E>(null); //构造一个节点
+		head = new Node<E>(null);
 	}
 
 	public Node<E> getHead() {
@@ -34,11 +70,12 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 向链表中指定位置的元素(0 - size),返回新节点
-	 * @author rico
+	 * @Description: 向链表中指定位置的元素(0 - size),返回新节点
 	 * @param data
 	 * @param index
-	 * @throws Exception
+	 * @return
+	 * @throws Exception Node<E>
+	 * @Autor: jason - jasonandy@hotmail.com
 	 */
 	public Node<E> add(E data, int index) throws Exception {
 		if (index > size) {
@@ -56,19 +93,20 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 向链表末尾添加元素,返回新节点
-	 * @author rico
+	 * @Description: 向链表末尾添加元素,返回新节点
 	 * @param data
-	 * @throws Exception
+	 * @return
+	 * @throws Exception Node<E>
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public Node<E> add(E data) throws Exception {
 		return add(data, size);
 	}
 	
-	/**     
-	 * @description 向链表尾部添加新节点
-	 * @author rico       
-	 * @param node     
+	/**
+	 * @Description: 向链表尾部添加新节点
+	 * @param node void
+	 * @Autor: Jason - jasonandy@hotmaill.com
 	 */
 	public void add(Node<E> node){
 		Node<E> cur = head;
@@ -84,11 +122,11 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 删除链表中指定位置的元素(0 ~ size-1)
-	 * @author rico
+	 * @Description:  删除链表中指定位置的元素(0 ~ size-1)
 	 * @param index
 	 * @return
-	 * @throws Exception
+	 * @throws Exception E
+	 * @Autor: Jason jasonandy@hotmail.com
 	 */
 	public E remove(int index) throws Exception {
 		if (index > size - 1 || index < 0) {
@@ -109,18 +147,18 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 向链表末尾删除元素
-	 * @author rico
+	 * @Description: 向链表末尾删除元素
 	 * @return
-	 * @throws Exception
+	 * @throws Exception E
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public E remove() throws Exception {
 		return remove(size - 1);
 	}
 
 	/**
-	 * @description 删除链表中的重复元素(外循环 + 内循环)
-	 * @author rico 时间复杂度：O(n^2)
+	 * @Description:  删除链表中的重复元素(外循环 + 内循环) 时间复杂度：O(n^2)
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public void removeDuplicateNodes() {
 		Node<E> cur = head.next;
@@ -140,10 +178,10 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 找出单链表中倒数第K个元素(双指针法,相差K-1步)
-	 * @author rico
+	 * @Description: 找出单链表中倒数第K个元素(双指针法,相差K-1步)
 	 * @param k
-	 * @return 时间复杂度：O(n)
+	 * @return Node<E> 时间复杂度：O(n)
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public Node<E> getEndK(int k) {
 		Node<E> pre = head.next;
@@ -165,8 +203,8 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 反转链表
-	 * @author rico
+	 * @Description: 反转链表
+	 * @Autor: JASON  - jasonandy@hotmail.com
 	 */
 	public void reverseLinkedList() {
 		Node<E> cur = head.next; // 原链表
@@ -182,17 +220,17 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 判断单链表是否为空
-	 * @author rico
-	 * @return
+	 * @Description: 判断单链表是否为空
+	 * @return boolean
+	 * @Autor:Jason - jasonandy@hotmail.com
 	 */
 	public boolean isEmpty() {
 		return size == 0;
 	}
 
 	/**
-	 * @description 打印输出单链表
-	 * @author rico
+	 * @Description: 打印输出单链表
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public void print() {
 		Node<E> cur = head.next;
@@ -204,9 +242,9 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 从尾到头输出单链表(递归法)
-	 * @author rico
-	 * @param head
+	 * @Description: 从尾到头输出单链表(递归法)
+	 * @param head 
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public void reversePrint(Node<E> head) {
 		if (head.next != null) {
@@ -216,8 +254,8 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 寻找单链表中的中间节点(双指针法)
-	 * @author rico
+	 * @Description: 寻找单链表中的中间节点(双指针法)
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public void printMiddleNodes() {
 		Node<E> index1 = head.next; // 慢指针
@@ -237,9 +275,9 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 判断单链表是否有环(双指针法)
-	 * @author rico
-	 * @return
+	 * @Description: 判断单链表是否有环(双指针法)
+	 * @return boolean
+	 * @Autor: JASON - jasonandy@hotmail.com
 	 */
 	public boolean hasLoop() {
 		Node<E> index1 = head.next; // 慢指针
@@ -256,10 +294,10 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 在不知道头结点的前提下，删除指定节点
-	 * @author rico
+	 * @Description: 在不知道头结点的前提下，删除指定节点
 	 * @param node
-	 * @return
+	 * @return boolean
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public boolean deleteNodeWithoutHead(Node<E> node) {
 		if (node == null || node.next == null) { // 当指定节点为空或者为尾节点时，无法删除
@@ -278,11 +316,11 @@ public class LinkedList<E> {
 		return true;
 	}
 
-	/**     
-	 * @description 判断当前链表与目标链表是否相交(相交与否取决于尾节点是否相同)
-	 * @author rico       
-	 * @param head
-	 * @return     
+	/**
+	 * @Description: 判断当前链表与目标链表是否相交(相交与否取决于尾节点是否相同)
+	 * @param list2
+	 * @return boolean
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public boolean isIntersect(LinkedList<E> list2) {
 		Node<E> cur1 = head.next;   // 当前链表
@@ -307,10 +345,10 @@ public class LinkedList<E> {
 	}
 
 	/**
-	 * @description 返回两链表的交点(若不相交，返回null)
-	 * @author rico
-	 * @param head
-	 * @return
+	 * @Description: 返回两链表的交点(若不相交，返回null)
+	 * @param list2
+	 * @return Node<E>
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public Node<E> getIntersectionPoint(LinkedList<E> list2) {
 		Node<E> cur1 = head.next;   // 当前链表
@@ -340,11 +378,11 @@ public class LinkedList<E> {
 		}
 		return null;
 	}
-	
-	/**     
-	 * @description 返回链表的长度
-	 * @author rico       
-	 * @return     
+
+	/**
+	 * @Description:  返回链表的长度
+	 * @return int
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public int size(){
 		return size;

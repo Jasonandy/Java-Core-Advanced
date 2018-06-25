@@ -3,11 +3,21 @@ package cn.ucaner.datastructure.test;
 import java.util.Comparator;
 
 import cn.ucaner.datastructure.stack.LinkedStack;
-  
+
+/**
+* @Package：cn.ucaner.datastructure.test   
+* @ClassName：LinkedStackTest   
+* @Description：   <p> LinkedStackTest </p>
+* @Author： -    
+* @CreatTime：2018年6月8日 上午10:43:02   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class LinkedStackTest {
-	// 测试
+	
 	public static void main(String[] args) throws Exception {
-		
 		LinkedStack<Integer> stack = new LinkedStack<Integer>();
 		Comparator<Integer> c = new Comparator<Integer>() {
 			@Override

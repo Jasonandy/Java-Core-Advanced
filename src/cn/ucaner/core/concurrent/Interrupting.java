@@ -7,9 +7,20 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：Interrupting   
+* @Description：   <p> Interrupting </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:49:23   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Interrupting {
-    private static ExecutorService exec =
-            Executors.newCachedThreadPool();
+	
+    private static ExecutorService exec = Executors.newCachedThreadPool();
 
     static void test(Runnable r) throws InterruptedException {
         Future<?> f = exec.submit(r);

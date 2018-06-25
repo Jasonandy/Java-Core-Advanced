@@ -3,11 +3,16 @@ package cn.ucaner.datastructure.backtrack;
 import java.util.Date;
 
 /**
- * Title: 八皇后问题(递归算法) Description: 在8×8格的国际象棋上摆放八个皇后，使其不能互相攻击，
- * 即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。
- * 
- * @author rico
- * @created 2017年5月31日 下午4:54:17
+* @Package：cn.ucaner.datastructure.backtrack   
+* @ClassName：EightQueen   
+* @Description：   <p> 八皇后问题(递归算法) </p>
+* 在8×8格的国际象棋上摆放八个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。
+* @Author： -    
+* @CreatTime：2018年6月8日 上午10:43:45   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
  */
 public class EightQueen {
 

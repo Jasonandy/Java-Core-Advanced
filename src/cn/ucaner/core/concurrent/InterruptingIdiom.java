@@ -2,6 +2,17 @@ package cn.ucaner.core.concurrent;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：InterruptingIdiom   
+* @Description：   <p> InterruptingIdiom </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:48:46   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class InterruptingIdiom {
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {

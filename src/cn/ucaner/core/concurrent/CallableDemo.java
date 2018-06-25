@@ -7,7 +7,17 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：CallableDemo   
+* @Description：   <p> CallableDemo </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:50:49   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class CallableDemo {
 	
     public static void main(String[] args) {

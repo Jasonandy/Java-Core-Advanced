@@ -1,10 +1,4 @@
-package cn.ucaner.core.thread;
-
-import java.util.concurrent.TimeUnit;
-
-/**
- * Created by BYSocket on 2015/11/2.
- *
+/*
  * Copyright [2015] [Jeff Lee]
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,6 +13,10 @@ import java.util.concurrent.TimeUnit;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+package cn.ucaner.core.thread;
+
+import java.util.concurrent.TimeUnit;
 
 /**
 * @Package：cn.ucaner.core.thread   

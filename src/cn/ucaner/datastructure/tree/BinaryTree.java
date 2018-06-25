@@ -46,7 +46,6 @@ public class BinaryTree<E> {
 	 *            原树的根结点
 	 */
 	public BinaryTree(Node<E> node) {
-		// TODO Auto-generated constructor stub
 		this.root = copy(node);
 	}
 

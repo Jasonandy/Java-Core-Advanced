@@ -1,40 +1,45 @@
 package cn.ucaner.datastructure.heap;
 
-/**        
- * Title: 最小堆 ：完全二叉树，能方便地从中取出最小/大元素   
- * Description: 
- * 堆的构建
- * 堆的打印(前序遍历的应用)
- * 堆的插入(插入到堆尾，再自下向上调整为最小堆)
- * 堆的删除(删除堆顶元素并用堆尾元素添补，再自上向下调整为最小堆)
- * 堆排序(时间复杂度：O(nlgn),空间复杂度O(1),不稳定)：升序排序一般用最大堆
- * @author rico       
- * @created 2017年5月24日 下午9:23:22    
- */      
+/**
+* @Package：cn.ucaner.datastructure.heap   
+* @ClassName：MinHeap   
+* @Description：   <p> 最小堆 ：完全二叉树，能方便地从中取出最小/大元素 </p>
+* 堆的构建
+* 堆的打印(前序遍历的应用)
+* 堆的插入(插入到堆尾，再自下向上调整为最小堆)
+* 堆的删除(删除堆顶元素并用堆尾元素添补，再自上向下调整为最小堆)
+* 堆排序(时间复杂度：O(nlgn),空间复杂度O(1),不稳定)：升序排序一般用最大堆
+* @Author： -    
+* @CreatTime：2018年6月8日 上午10:48:46   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class MinHeap {
 	
-	private int[] heap;  // 将所有元素以完全二叉树的形式存入数组
-	private int size;  // 堆中元素的个数
+	/**
+	 * 将所有元素以完全二叉树的形式存入数组
+	 */
+	private int[] heap; 
+	
+	/**
+	 * 堆中元素的个数
+	 */
+	private int size;
 
 	/**
-	 * 构造函数
-	 * 
-	 * @description 构建一个大小为size的最小堆
-	 * @author rico
-	 * @created 2017年5月24日 下午8:19:46
-	 * @param size
+	* MinHeap.  构造函数  - 构建一个大小为size的最小堆
+	* @param maxSize
 	 */
 	public MinHeap(int maxSize) {
 		heap = new int[maxSize];
 	}
 
 	/**
-	 * 构造函数
-	 * 
-	 * @description 基于数组构造最小堆
-	 * @author rico
-	 * @created 2017年5月24日 下午8:18:56
-	 * @param arr
+	* MinHeap.    构造函数
+	* @param arr  基于数组构造最小堆
+	* @param maxSize
 	 */
 	public MinHeap(int[] arr, int maxSize) {
 		heap = new int[maxSize > arr.length ? maxSize : arr.length];
@@ -49,11 +54,10 @@ public class MinHeap {
 	}
 
 	/**
-	 * @description 自上向下调整为最小堆(从不是最小堆调整为最小堆)，调整的前提是其左子树与右子树均为最小堆
-	 * @author rico
-	 * @created 2017年5月24日 下午7:52:39
+	 * @Description: 自上向下调整为最小堆(从不是最小堆调整为最小堆)，调整的前提是其左子树与右子树均为最小堆
 	 * @param start
-	 * @param end
+	 * @param end void
+	 * @Autor: jason - jasonandy@hotmail.com
 	 */
 	private void shiftDown(int start, int end) {
 		int i = start;       // 起始调整位置，分支节点
@@ -74,11 +78,9 @@ public class MinHeap {
 		heap[i] = temp;  // 一步到位
 	}
 	
-	/**     
-	 * @description 自下向上调整为最小堆(原来已是最小堆，添加元素后，确保其还是最小堆)
-	 * @author rico       
-	 * @created 2017年5月24日 下午9:09:37     
-	 * @param start     
+	/**
+	 * @Description: 自下向上调整为最小堆(原来已是最小堆，添加元素后，确保其还是最小堆)
+	 * @Autor:jason - jasonandy@hotmail.com
 	 */
 	private void shiftUp(int start) {
 		int j = start;
@@ -97,10 +99,9 @@ public class MinHeap {
 	}
 
 	/**
-	 * @description 向最小堆插入元素(总是插入到最小堆的最后)
-	 * @author rico
-	 * @created 2017年5月24日 下午8:22:58
-	 * @param data
+	 * @Description: 向最小堆插入元素(总是插入到最小堆的最后)
+	 * @param data 
+	 * @Autor: jason - jasonandy@hotmail.com
 	 */
 	public void insert(int data){
 		if (size < heap.length) {
@@ -110,10 +111,9 @@ public class MinHeap {
 	}
 
 	  
-	/**     
-	 * @description 删除堆顶元素，以堆的最后一个元素填充
-	 * @author rico       
-	 * @created 2017年5月24日 下午9:11:46          
+	/**
+	 * @Description:删除堆顶元素，以堆的最后一个元素填充
+	 * @Autor: jason - jasonandy@hotmail.com
 	 */
 	public void remove() {
 		if (size > 0) {
@@ -124,10 +124,9 @@ public class MinHeap {
 	}
 	
 	  
-	/**     
-	 * @description 堆排序:每次将最小元素交换到最后
-	 * @author rico       
-	 * @created 2017年5月24日 下午9:42:31          
+	/**
+	 * @Description: 堆排序:每次将最小元素交换到最后
+	 * @Autor: jason - jasonandy@hotmail.com
 	 */
 	public void sort(){
 		for (int i = size - 1; i >= 0; i--) {
@@ -144,10 +143,9 @@ public class MinHeap {
 	}
 
 	/**
-	 * @description 打印根为 i 的最小堆
-	 * @author rico
-	 * @created 2017年5月24日 下午8:17:16
-	 * @param i
+	 * @Description: 打印根为 i 的最小堆 
+	 * @param i 
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public void printMinHeap(int i) {
 		if (size > i) {

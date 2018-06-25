@@ -8,7 +8,19 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：PipedIO   
+* @Description：   <p> PipedIO </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:47:31   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class PipedIO {
+	
     public static void main(String[] args) throws Exception {
         Sender sender = new Sender();
         Receiver receiver = new Receiver(sender);

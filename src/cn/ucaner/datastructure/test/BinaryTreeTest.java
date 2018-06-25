@@ -2,7 +2,20 @@ package cn.ucaner.datastructure.test;
 
 import cn.ucaner.datastructure.tree.BinaryTree;
 
+/**
+* @Package：cn.ucaner.datastructure.test   
+* @ClassName：BinaryTreeTest   
+* @Description：   <p> BinaryTreeTest </p>
+* @Author： -    
+* @CreatTime：2018年6月8日 上午10:42:23   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class BinaryTreeTest {
+	
+	
 	public static void main(String[] args) {
 		BinaryTree<Character> tree = new BinaryTree<Character>();
 		tree.createBinaryTree("A(B(D,E(G(I,J),M)),C(F(,H(,K)),))");

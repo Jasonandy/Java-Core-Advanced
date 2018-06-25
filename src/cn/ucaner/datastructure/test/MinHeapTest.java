@@ -2,10 +2,22 @@ package cn.ucaner.datastructure.test;
 
 import cn.ucaner.datastructure.heap.MinHeap;
 
+/**
+* @Package：cn.ucaner.datastructure.test   
+* @ClassName：MinHeapTest   
+* @Description：   <p> 堆排 </p>
+* @Author： - Jason   
+* @CreatTime：2018年6月8日 上午10:09:39   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class MinHeapTest {
+	
+	
 	public static void main(String[] args) {
-		
-		int[] arr = {53, 17, 78, 9, 45, 65, 87, 23};
+		int[] arr = {19, 94, 11, 15, 19, 49, 10, 01};
 		MinHeap heap = new MinHeap(arr,20);
 		System.out.println("堆：");
 		heap.printMinHeap(0);

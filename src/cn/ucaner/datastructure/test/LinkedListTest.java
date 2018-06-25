@@ -2,7 +2,20 @@ package cn.ucaner.datastructure.test;
 
 import cn.ucaner.datastructure.list.LinkedList;
 
+/**
+* @Package：cn.ucaner.datastructure.test   
+* @ClassName：LinkedListTest   
+* @Description：   <p> LinkedListTest </p>
+* @Author： -    
+* @CreatTime：2018年6月8日 上午10:42:35   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class LinkedListTest {
+	
+	
 	public static void main(String[] args) throws Exception {
 		
 		LinkedList<String> list1 = new LinkedList<String>();

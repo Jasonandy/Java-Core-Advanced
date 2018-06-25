@@ -1,8 +1,3 @@
-package cn.ucaner.core.thread;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 /*
  * Copyright [2015] [Jeff Lee]
  *
@@ -18,6 +13,11 @@ import java.util.concurrent.Executors;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+package cn.ucaner.core.thread;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
 * @Package：cn.ucaner.core.thread   

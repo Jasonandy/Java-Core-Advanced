@@ -2,6 +2,17 @@ package cn.ucaner.core.concurrent;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：SimpleDaemons   
+* @Description：   <p> SimpleDaemons </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:47:21   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class SimpleDaemons implements Runnable {
     public void run() {
         try {

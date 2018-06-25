@@ -21,20 +21,17 @@ public class BinarySearchTree {
 	
 
 	/**
-	 * @description 根据已知序列构建二叉搜索树
-	 * @author rico
-	 * @created 2017年6月3日 下午6:15:54
-	 * @param input
+	* BinarySearchTree.   根据已知序列构建二叉搜索树
+	* @param input
 	 */
 	public BinarySearchTree(int[] input) {
 		createBinarySearchTree(input);
 	}
 
 	/**
-	 * @description 根据已知序列构建二叉搜索树
-	 * @author rico
-	 * @created 2017年6月3日 下午6:15:06
-	 * @param input
+	 * @Description: 根据已知序列构建二叉搜索树
+	 * @param input void
+	 * @Autor:Jason - jasonandy@hotmail.com
 	 */
 	public void createBinarySearchTree(int[] input) {
 		if (input != null) {
@@ -45,14 +42,11 @@ public class BinarySearchTree {
 	}
 
 	/**
-	 * @description 二叉搜索树的搜索算法，递归算法
-	 * @author rico
-	 * @created 2017年6月3日 下午3:27:43
-	 * @param target
-	 *            目标值
-	 * @param root
-	 *            二叉搜索树的根结点
-	 * @return
+	 * @Description: 二叉搜索树的搜索算法，递归算法 
+	 * @param target 目标值
+	 * @param root   二叉搜索树的根结点
+	 * @return TreeNode
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public TreeNode search(int target, TreeNode root) {
 		TreeNode result = null;
@@ -70,12 +64,11 @@ public class BinarySearchTree {
 	}
 
 	/**
-	 * @description 二叉搜索树的插入操作
-	 * @author rico
-	 * @created 2017年6月3日 下午5:55:05
+	 * @Description: 二叉搜索树的插入操作 
 	 * @param target
 	 * @param node
-	 * @return
+	 * @return TreeNode
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public TreeNode insert(int target, TreeNode node) {
 		if (search(target, node) == null) {
@@ -93,12 +86,11 @@ public class BinarySearchTree {
 	}
 
 	/**
-	 * @description 删除搜索二叉树的制定结点
-	 * @author rico
-	 * @created 2017年6月3日 下午8:43:29
+	 * @Description: 删除搜索二叉树的制定结点
 	 * @param target
 	 * @param node
-	 * @return
+	 * @return TreeNode
+	 * @Autor: jason - jasonandy@hotmail.com
 	 */
 	public TreeNode remove(int target, TreeNode node) {
 		TreeNode tmp = null;
@@ -131,10 +123,9 @@ public class BinarySearchTree {
 	}
 
 	/**
-	 * @description 中序遍历二叉搜索树，递归算法，升序排序
-	 * @author rico
-	 * @created 2017年6月3日 下午3:52:54
-	 * @param root
+	 * @Description: 中序遍历二叉搜索树，递归算法，升序排序
+	 * @param node void
+	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
 	public void inOrder(TreeNode node) {
 		if (node != null) {
@@ -145,10 +136,9 @@ public class BinarySearchTree {
 	}
 
 	/**
-	 * @description 打印二叉搜索树
-	 * @author rico
-	 * @created 2017年6月3日 下午6:08:42
-	 * @param node
+	 * @Description:  打印二叉搜索树
+	 * @param node void
+	 * @Autor:jason - jasonandy@hotmail.com
 	 */
 	public void printTree(TreeNode node) {
 		if (node != null) {
@@ -164,10 +154,9 @@ public class BinarySearchTree {
 	}
 
 	/**
-	 * @description 访问二叉搜索树的根结点
-	 * @author rico
-	 * @created 2017年6月3日 下午3:54:49
-	 * @return
+	 * @Description: 访问二叉搜索树的根结点
+	 * @return TreeNode
+	 * @Autor:Jason - jasonandy@hotmail.com
 	 */
 	public TreeNode getRoot() {
 		return root;

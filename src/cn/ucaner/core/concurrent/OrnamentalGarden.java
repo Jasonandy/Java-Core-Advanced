@@ -7,6 +7,17 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：Count   
+* @Description：   <p> Count </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:48:13   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
+ */
 class Count {
     private int count = 0;
     private Random rand = new Random(47);

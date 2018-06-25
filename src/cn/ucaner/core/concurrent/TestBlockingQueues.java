@@ -8,6 +8,17 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：TestBlockingQueues   
+* @Description：   <p> TestBlockingQueues </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:46:07   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class TestBlockingQueues {
     static void getkey() {
         try {

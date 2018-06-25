@@ -2,6 +2,17 @@ package cn.ucaner.datastructure.test;
 
 import cn.ucaner.datastructure.queue.SeqQueue;
 
+/**
+* @Package：cn.ucaner.datastructure.test   
+* @ClassName：SeqQueueTest   
+* @Description：   <p> SeqQueueTest </p>
+* @Author： -    
+* @CreatTime：2018年6月8日 上午10:21:04   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class SeqQueueTest {
 
 	public static void main(String[] args) {

@@ -13,17 +13,33 @@ package cn.ucaner.datastructure.BinarySearchTree;
  */
 public class TreeNode {
 
-	public int data;//结点的数据项  
-	public TreeNode left; //结点指向左孩子的引用  
-	public TreeNode right;//结点指向右孩子的引用
+	/**
+	 *结点的数据项   
+	 */
+	public int data;
 	
+	/**
+	 * 结点指向左孩子的引用  
+	 */
+	public TreeNode left; 
+	
+	/**
+	 * 结点指向右孩子的引用
+	 */
+	public TreeNode right;
+	
+	
+	/**
+	* TreeNode.  构造方法，初始化结点数据项 
+	* @param data
+	 */
 	public TreeNode(int data){
-		this.data = data;//构造方法，初始化结点数据项 
+		this.data = data;
 	}
 
 	@Override
 	public String toString() {
-		return "TreeNode [data=" + data + "]";//便于输出数据
+		return "TreeNode [data=" + data + "]";
 	}
 	
 }

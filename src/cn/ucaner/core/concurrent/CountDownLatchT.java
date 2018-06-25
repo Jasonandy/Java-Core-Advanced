@@ -11,9 +11,8 @@ import java.util.concurrent.TimeUnit;
 * @ClassName：CountDownLatchT   
 * @Description：   
 * <p> 同步辅助类:完成一组线程执行前,使得一个或多个线程一直等待 </br> {@link https://www.cnblogs.com/cuglkb/p/8572239.html https://blog.csdn.net/yanyan19880509/article/details/52349056}
-* 
 * </p>
-* @Author： - bysocket   
+* @Author：    
 * @CreatTime：2018年4月5日 下午12:57:20   
 * @Modify By：   
 * @ModifyTime：  2018年4月5日

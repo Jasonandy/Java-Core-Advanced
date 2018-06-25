@@ -12,6 +12,17 @@ import cn.ucaner.datastructure.sort.ShellSort;
 import cn.ucaner.datastructure.sort.StraightInsertionSort;
 import cn.ucaner.datastructure.sort.StraightSelectSort;
 
+/**
+* @Package：cn.ucaner.datastructure.test   
+* @ClassName：SortTest   
+* @Description：   <p> SortTest   各种排序测试   </p>
+* @Author： -    
+* @CreatTime：2018年6月8日 上午10:20:26   
+* @Modify By：   
+* @ModifyTime：  2018年6月8日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class SortTest {
 
 	public static void main(String[] args) {

@@ -1,5 +1,3 @@
-package cn.ucaner.core.thread;
-
 /*
  * Copyright [2015] [Jeff Lee]
  *
@@ -15,6 +13,7 @@ package cn.ucaner.core.thread;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package cn.ucaner.core.thread;
 
 /**
 * @Package：cn.ucaner.core.thread   

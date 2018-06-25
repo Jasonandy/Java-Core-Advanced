@@ -5,7 +5,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by brian on 16/11/30.
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：SleepingTask   
+* @Description：   <p> SleepingTask </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:46:46   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
  */
 public class SleepingTask extends LiftOff {
     @Override

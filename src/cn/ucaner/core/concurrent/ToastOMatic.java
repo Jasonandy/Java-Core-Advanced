@@ -6,6 +6,17 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
+/**
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：ToastOMatic   
+* @Description：   <p> ToastOMatic </p>
+* @Author： -    
+* @CreatTime：2018年6月12日 下午3:45:53   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ToastOMatic {
     public static void main(String[] args) throws Exception {
         ToastQueue dryQueue = new ToastQueue(),

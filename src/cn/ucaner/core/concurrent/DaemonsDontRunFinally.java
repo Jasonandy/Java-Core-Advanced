@@ -3,11 +3,16 @@ package cn.ucaner.core.concurrent;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Daemon threads don't run the finally clause
- *
- * output:"Starting ADaemon" or nothing
+* @Package：cn.ucaner.core.concurrent   
+* @ClassName：DaemonsDontRunFinally   
+* @Description：   <p> Daemon threads don't run the finally clause output:"Starting ADaemon" or nothing </p>
+* @Author： - wubin   
+* @CreatTime：2018年6月12日 下午3:50:19   
+* @Modify By：   
+* @ModifyTime：  2018年6月12日
+* @Modify marker：   
+* @version    V1.0
  */
-
 public class DaemonsDontRunFinally {
     public static void main(String[] args) throws Exception {
         Thread t = new Thread(new ADaemon());
