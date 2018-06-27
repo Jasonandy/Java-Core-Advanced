@@ -18,6 +18,10 @@ package cn.ucaner.component.jndi;
 * https://www.cnblogs.com/zhchoutai/p/7389089.html
 * 
 * https://www.cnblogs.com/shawnblogs/p/5279733.html
+* 
+* https://www.cnblogs.com/xdp-gacl/p/3951952.html
+* 
+* https://baike.baidu.com/item/JNDI/3792442
 * </p>
 * @Author： - Jason   
 * @CreatTime：2018年5月17日 上午9:02:59   

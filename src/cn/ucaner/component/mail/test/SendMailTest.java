@@ -39,6 +39,7 @@ public class SendMailTest {
         mailInfo.setSubject("Test for Jason");
         mailInfo.setContent("You are what you want to be.");
         // 这个类主要来发送邮件
+
         SimpleMailSender sms = new SimpleMailSender();
         //sms.sendTextMail(mailInfo);// 发送 text格式
         //sms.sendHtmlMail(mailInfo); // 发送html格式
