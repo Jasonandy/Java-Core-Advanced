@@ -11,6 +11,17 @@ package cn.ucaner.core.annotation;
 
 import java.lang.reflect.Field;
 
+/**
+* @Package：cn.ucaner.core.annotation   
+* @ClassName：SortableField   
+* @Description：   <p> SortableField 可排序字段 </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月18日 下午9:55:25   
+* @Modify By：   
+* @ModifyTime：  2018年10月18日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class SortableField {
 	
 	public SortableField(){}  

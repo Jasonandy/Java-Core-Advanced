@@ -37,4 +37,10 @@ public interface EchoService {
 	 */
 	public String helloWorld();
 	
+	/**
+	 * @Description: 展示作用
+	 * @Autor: Jason
+	 */
+	public void show();
+	
 }

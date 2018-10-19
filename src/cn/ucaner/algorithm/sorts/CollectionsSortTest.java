@@ -26,11 +26,8 @@ import java.util.Collections;
  */
 public class CollectionsSortTest {
 	
-	public static void main(String[] args)
-	{
-        // TODO Auto-generated method stub
-        
-        Integer[] num = {5,8,3,9,1};
+	public static void main(String[] args){
+        Integer[] num = {5,8,3,9,1,2,3,4,5,5,6,6,7,7,8,12,34,45,67,44,32};
         //double[] num = {4.4,2.9,6.3};  //不可以
         //Double[] num = {4.4,2.9,6.3};  //可以
         Arrays.sort(num,Collections.reverseOrder()); //对整形数组按降序排序

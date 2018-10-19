@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.io.serializable;
 
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
@@ -16,6 +25,7 @@ import java.io.*;
 * @version    V1.0
  */
 public class SerializableT {
+	
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         for (int i = 0;i < 10;i++) {
             AObjcet aObjcet = new AObjcet();
@@ -41,6 +51,7 @@ public class SerializableT {
         }
     }
 }
+
 class AObjcet implements Serializable {
     private String a = "bysocket";
     private String b = "likes";
@@ -61,6 +72,7 @@ class AObjcet implements Serializable {
     private BObject dObject = new BObject();
 
 }
+
 class BObject implements Serializable {
 
 }

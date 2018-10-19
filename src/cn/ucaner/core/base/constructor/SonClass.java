@@ -1,11 +1,19 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason https://github.com/Jasonandy/patterns</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.constructor;
 
 /**
- * 
 * @Package：cn.ucaner.core.base.constructor   
 * @ClassName：SonClass   
 * @Description：   <p> 构造方法调用问题 </br>子类构造方法会首先默认调用父类的无参构造方法，无论是否显式写了super()</p>
-* @Author： - DaoDou   
+* @Author： - Jason   
 * @CreatTime：2018年4月10日 上午10:55:13   
 * @Modify By：   
 * @ModifyTime：  2018年4月10日

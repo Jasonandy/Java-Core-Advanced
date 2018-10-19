@@ -49,7 +49,7 @@ public class RpcTest {
             @Override
             public void run() {
                 try {
-                    RpcExporter.exporter("localhost",8088);
+                    RpcExporter.exporter("localhost",8088); //启动服务的提供者
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -76,6 +76,7 @@ public class RpcTest {
         System.out.println(echo.echo(null));
         System.out.println(echo.echo("Are you OK?"));
         System.out.println(echo.helloWorld());//远程实现
+        echo.show();
     }
 }
 //Output

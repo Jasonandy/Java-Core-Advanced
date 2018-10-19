@@ -15,6 +15,17 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/**
+* @Package：cn.ucaner.core.annotation   
+* @ClassName：FieldMeta   
+* @Description：   <p> @FieldMeta  - 注解描述信息 </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月18日 下午9:53:45   
+* @Modify By：   
+* @ModifyTime：  2018年10月18日
+* @Modify marker：   
+* @version    V1.0
+ */
 @Retention(RetentionPolicy.RUNTIME) // 注解会在class字节码文件中存在，在运行时可以通过反射获取到  
 @Target({ElementType.FIELD,ElementType.METHOD})//定义注解的作用目标**作用范围字段、枚举的常量/方法  
 @Documented//说明该注解将被包含在javadoc中  

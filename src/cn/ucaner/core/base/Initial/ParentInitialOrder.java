@@ -9,6 +9,17 @@
  */
 package cn.ucaner.core.base.Initial;
 
+/**
+* @Package：cn.ucaner.core.base.Initial   
+* @ClassName：ParentInitialOrder   
+* @Description：   <p> ParentInitialOrder 初始化顺序</p>
+* @Author： - Jason   
+* @CreatTime：2018年10月18日 下午9:58:22   
+* @Modify By：   
+* @ModifyTime：  2018年10月18日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ParentInitialOrder {
 	
 	private static String staticField = "Parent Static Field Initial -p1";

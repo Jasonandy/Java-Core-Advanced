@@ -10,6 +10,17 @@
  */
 package cn.ucaner.core.classload.test;  
   
+/**
+* @Package：cn.ucaner.core.classload.test   
+* @ClassName：ClassLoaderTest   
+* @Description：   <p> ClassLoaderTest </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月19日 下午3:18:23   
+* @Modify By：   
+* @ModifyTime：  2018年10月19日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ClassLoaderTest {  
   
     public static void main(String[] args) {  

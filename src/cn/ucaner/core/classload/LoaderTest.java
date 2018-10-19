@@ -82,7 +82,8 @@ import java.net.URL;
  */
 public class LoaderTest {  
   
-    public static void main(String[] args) {  
+    @SuppressWarnings("static-access")
+	public static void main(String[] args) {  
         try {  
             System.out.println(ClassLoader.getSystemClassLoader());  
             System.out.println(ClassLoader.getSystemClassLoader().getParent());  

@@ -1,9 +1,26 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.juc;
 
 import java.util.concurrent.CountDownLatch;
 
-/*
- * CountDownLatch ：闭锁，在完成某些运算是，只有其他所有线程的运算全部完成，当前运算才继续执行
+/**
+* @Package：cn.ucaner.core.juc   
+* @ClassName：TestCountDownLatch   
+* @Description：   <p> CountDownLatch ：闭锁，在完成某些运算是，只有其他所有线程的运算全部完成，当前运算才继续执行 </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月19日 下午3:30:03   
+* @Modify By：   
+* @ModifyTime：  2018年10月19日
+* @Modify marker：   
+* @version    V1.0
  */
 public class TestCountDownLatch {
 

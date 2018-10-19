@@ -13,7 +13,7 @@ package cn.ucaner.core.eum;
  * @Package：cn.ucaner.core.eum   
  * @ClassName：ColorImpl   
  * @Description：   <p> ColorImpl 实现接口  </br> 所有的枚举都继承自java.lang.Enum类。由于Java 不支持多继承，所以枚举对象不能再继承其他类。  </p>
- * @Author： - DaoDou   
+ * @Author： - Jason   
  * @Modify By：   
  * @Modify marker：   
  * @version    V1.0

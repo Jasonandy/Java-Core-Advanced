@@ -9,6 +9,17 @@
  */
 package cn.ucaner.core.base.Initial;
 
+/**
+* @Package：cn.ucaner.core.base.Initial   
+* @ClassName：InitialOrderTest   
+* @Description：   <p> 初始化顺序</p>
+* @Author： - Jason   
+* @CreatTime：2018年10月18日 下午9:58:41   
+* @Modify By：   
+* @ModifyTime：  2018年10月18日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class InitialOrderTest {
 	
 	public static int k = 0;

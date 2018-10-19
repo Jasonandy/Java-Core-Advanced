@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.concurrent;
 
 import java.util.Random;
@@ -18,6 +27,7 @@ import java.util.concurrent.TimeUnit;
 * @version    V1.0
  */
 public class ToastOMatic {
+	
     public static void main(String[] args) throws Exception {
         ToastQueue dryQueue = new ToastQueue(),
                 butteredQueue = new ToastQueue(),

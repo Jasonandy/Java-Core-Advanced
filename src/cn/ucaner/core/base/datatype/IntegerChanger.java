@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason https://github.com/Jasonandy/patterns</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.base.datatype;
 
 import java.lang.reflect.Field;

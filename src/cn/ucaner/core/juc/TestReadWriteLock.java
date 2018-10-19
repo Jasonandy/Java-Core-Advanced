@@ -1,14 +1,30 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.juc;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/*
- * 1. ReadWriteLock : 读写锁
- * 
- * 写写/读写 需要“互斥”
- * 读读 不需要互斥
- * 
+/**
+* @Package：cn.ucaner.core.juc   
+* @ClassName：TestReadWriteLock   
+* @Description：   <p> 1. ReadWriteLock : 读写锁
+* 写写/读写 需要“互斥”
+* 读读 不需要互斥
+* </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月19日 下午3:40:40   
+* @Modify By：   
+* @ModifyTime：  2018年10月19日
+* @Modify marker：   
+* @version    V1.0
  */
 public class TestReadWriteLock {
 

@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.thread;
 
 import java.util.ArrayList;
@@ -28,7 +37,7 @@ class TaskWithResult implements Callable<String> {
 
     @Override
     public String call() throws Exception {
-        return "result of TaskWithResult " + id;
+        return "RESULT OF TASKWITHRESULT " + id;
     }
 }
 

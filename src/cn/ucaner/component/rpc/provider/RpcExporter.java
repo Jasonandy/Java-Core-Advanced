@@ -32,10 +32,19 @@ import java.util.concurrent.Executors;
  */
 public class RpcExporter {
 	
-    // 创建线程池 用来处理 客服端发送过来的二进制流数据
+	/**
+	 * 创建固定大小的线程池 大小为CPU处理器的Runtime.getRuntime().availableProcessors()核心线程数
+	 *  创建线程池 用来处理 客服端发送过来的二进制流数据
+	 */
     static Executor executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-    
+    /**
+     * @Description: exporter  - 用来监听tcp连接   - 二进制流反序列化成对象,反射调用服务实现者,获取执行结果
+     * @param hostName         被监听的主机名称
+     * @param port             被监听的端口
+     * @throws IOException     
+     * @Autor: Jason
+     */
     public static void exporter(String hostName,int port) throws IOException {
         ServerSocket serverSocket = new ServerSocket();
         serverSocket.bind(new InetSocketAddress(hostName,port));
@@ -63,6 +72,11 @@ public class RpcExporter {
             this.client = accept;
         }
 
+        /**
+         * 可自定义 通信协议  比如dubbo协议等
+         * 
+         *  
+         */
         @Override
         public void run() {
             ObjectInputStream   input  = null;
@@ -82,15 +96,23 @@ public class RpcExporter {
                 // 获取服务对象类
                 Class<?> service = Class.forName(interfaceName);
                 
-                // 获取服务方法
+                /**
+                 * 通过 methodName 和 paramTypes 获取具体的方法
+                 */
                 Method method = service.getMethod(methodName,paramTypes);
                 
                 // 获取服务方法返回对象  //so interfaces 接口应该的包全名 和 serviceImpl远程对应的要一致
+                /**
+                 * 反射的方式调用需要调用的远程的方法
+                 */
                 Object result = method.invoke(service.newInstance(),arguments);
 
                 // 对象输出流
                 output = new ObjectOutputStream(client.getOutputStream());
                 
+                /**
+                 * 将结果写出去
+                 */
                 output.writeObject(result);
 
             } catch (Exception e) {

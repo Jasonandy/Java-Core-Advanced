@@ -1,18 +1,31 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.datastructure.queue;
 
 import java.util.Arrays;
 
-  
-/**        
- * Title: 基于数组的队列实现     
- * Description: 
- * @author rico       
- * @created 2017年5月19日 下午8:23:55    
- */      
+/**
+* @Package：cn.ucaner.datastructure.queue   
+* @ClassName：SeqQueue   
+* @Description：   <p> 基于数组的队列实现  </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月19日 下午3:54:37   
+* @Modify By：   
+* @ModifyTime：  2018年10月19日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class SeqQueue<E> {
 
 	
-	/**  队列的存储结构   (@author: rico) */      
+	/**  队列的存储结构 */      
 	private Object[] queue;         
 	private int size;
 	private int maxSize;    // 最大容量
@@ -23,11 +36,10 @@ public class SeqQueue<E> {
 	}
 	
 	  
-	/**     
-	 * @description 添加元素到队尾
-	 * @author rico       
-	 * @created 2017年5月19日 下午8:25:32     
-	 * @param data     
+	/**
+	 * @Description: 添加元素到队尾
+	 * @param data 
+	 * @Autor: Jason
 	 */
 	public void put(E data){
 		if(!isFull()){
@@ -37,11 +49,10 @@ public class SeqQueue<E> {
 	}
 	
 	  
-	/**     
-	 * @description 删除队头并返回队头元素的值
-	 * @author rico       
-	 * @created 2017年5月19日 下午8:25:47     
-	 * @return     
+	/**
+	 * @Description: 删除队头并返回队头元素的值
+	 * @return E
+	 * @Autor: Jason
 	 */
 	public E pop(){
 		if (!isEmpty()) {
@@ -56,12 +67,10 @@ public class SeqQueue<E> {
 		return null;
 	}
 	
-	  
-	/**     
-	 * @description 返回队头元素
-	 * @author rico       
-	 * @created 2017年5月19日 下午8:26:01     
-	 * @return     
+	/**
+	 * @Description: 返回队头元素
+	 * @return E
+	 * @Autor: Jason
 	 */
 	public E peek(){
 		if (!isEmpty()) {
@@ -71,33 +80,29 @@ public class SeqQueue<E> {
 	}
 	
 	  
-	/**     
-	 * @description 队列是否已满
-	 * @author rico       
-	 * @created 2017年5月19日 下午8:26:14     
-	 * @return     
+	/**
+	 * @Description: 队列是否已满
+	 * @return boolean
+	 * @Autor: Jason
 	 */
 	public boolean isFull(){
 		return size == maxSize;
 	}
 	
-	  
-	/**     
-	 * @description 队列是否为空
-	 * @author rico       
-	 * @created 2017年5月19日 下午8:26:25     
-	 * @return     
+	/**
+	 * @Description: 队列是否为空
+	 * @return boolean
+	 * @Autor: Jason
 	 */
 	public boolean isEmpty(){
 		return size == 0;
 	}
 	
 	  
-	/**     
-	 * @description 队列的大小
-	 * @author rico       
-	 * @created 2017年5月19日 下午8:26:34     
-	 * @return     
+	/**
+	 * @Description:  队列的大小
+	 * @return int
+	 * @Autor: Jason
 	 */
 	public int size(){
 		return size;
@@ -105,7 +110,6 @@ public class SeqQueue<E> {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return Arrays.toString(queue);
 	}
 }

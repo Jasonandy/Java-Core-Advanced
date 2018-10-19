@@ -27,6 +27,7 @@ package cn.ucaner.core.thread;
 * @version    V1.0
  */
 public class BasicThreads {
+	
     public static void main(String[] args) {
         // 创建新的线程
         Thread t = new Thread(new LiftOff());

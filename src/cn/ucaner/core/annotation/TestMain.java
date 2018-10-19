@@ -11,6 +11,17 @@ package cn.ucaner.core.annotation;
 
 import java.lang.reflect.Field;
 
+/**
+* @Package：cn.ucaner.core.annotation   
+* @ClassName：TestMain   
+* @Description：   <p> TestMain </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月19日 下午3:17:20   
+* @Modify By：   
+* @ModifyTime：  2018年10月19日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class TestMain {
 
     @FieldMeta(name="Jason")//注解的使用

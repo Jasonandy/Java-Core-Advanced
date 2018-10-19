@@ -1,13 +1,25 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.datastructure.queue;
 
-  
-/**        
- * Title: 基于链表的队列实现  
- * Description: 含头结点(头结点不存储值,添加操作O(1))，尾指针(删除操作O(1))
- * @author rico       
- * @created 2017年5月19日 下午8:49:34    
- */      
-    
+/**
+* @Package：cn.ucaner.datastructure.queue   
+* @ClassName：LinkedQueue   
+* @Description：   <p> 基于链表的队列实现  - 含头结点(头结点不存储值,添加操作O(1))，尾指针(删除操作O(1)) </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月19日 下午3:54:06   
+* @Modify By：   
+* @ModifyTime：  2018年10月19日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class LinkedQueue<E> {
 
 	private Node<E> head;  // 头结点

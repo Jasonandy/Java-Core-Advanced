@@ -40,6 +40,11 @@ public class EchoServiceImpl implements EchoService {
 	public String helloWorld() {
 		return "HelloWorld Rpc .  \r  -- Hi. I'am Jason .  \r  -- thks. ";
 	}
+
+	@Override
+	public void show() {
+		System.out.println("I'M RPC SHOW.");
+	}
 	
 	
 }

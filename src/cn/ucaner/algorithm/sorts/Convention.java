@@ -55,10 +55,10 @@ public class Convention {
 	 * @Description: Just for test 
 	 */
 	public static void main(String[] args) {
-		//int m = 1115;
-		//int n =828;
-		int m = 8;
-		int n = 12;
+		int m = 1115;
+		int n =828;
+		//int m = 8;
+		//int n = 12;
 		System.out.println(divisor(m,n));//最大公约数 
 		System.out.println(gbs(m, n));//最小公倍数
 	}

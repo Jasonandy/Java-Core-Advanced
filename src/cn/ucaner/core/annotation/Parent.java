@@ -16,6 +16,18 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+
+/**
+* @Package：cn.ucaner.core.annotation   
+* @ClassName：Parent   
+* @Description：   <p> Parent<T> </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月18日 下午9:54:26   
+* @Modify By：   
+* @ModifyTime：  2018年10月18日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Parent<T> {
 	
 	private Class<T> entity;  

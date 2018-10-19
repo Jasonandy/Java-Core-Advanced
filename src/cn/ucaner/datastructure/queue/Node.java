@@ -1,23 +1,35 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.datastructure.queue;
 
 /**
- * Title: 结点类 
- * Description: 线性表的基本元素
- * 
- * @author rico
- * @created 2017年4月6日 下午9:55:58
+* @Package：cn.ucaner.datastructure.queue   
+* @ClassName：Node   
+* @Description：   <p> 结点类  - 线性表的基本元素 </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月19日 下午3:56:53   
+* @Modify By：   
+* @ModifyTime：  2018年10月19日
+* @Modify marker：   
+* @version    V1.0
  */
  public class Node<T> {
+	 
 	//包可见性
-	Node<T> next;   
+	Node<T> next; 
+	
 	T data;
 
 	/**
 	 * 构造函数
-	 * 
 	 * @description 构造一个新节点
-	 * @author rico
-	 * @created 2017年4月6日 下午9:56:56
 	 * @param data
 	 *            新元素数据
 	 * @param next

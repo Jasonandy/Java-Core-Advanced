@@ -1,7 +1,24 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.  - https://github.com/Jasonandy/Java-Core-Advanced </p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.core.juc;
 
-/*
- * 生产者和消费者案例
+/**
+* @Package：cn.ucaner.core.juc   
+* @ClassName：TestProductorAndConsumer   
+* @Description：   <p> 生产者和消费者案例 </p>
+* @Author： - Jason   
+* @CreatTime：2018年10月19日 下午3:39:46   
+* @Modify By：   
+* @ModifyTime：  2018年10月19日
+* @Modify marker：   
+* @version    V1.0
  */
 public class TestProductorAndConsumer {
 
