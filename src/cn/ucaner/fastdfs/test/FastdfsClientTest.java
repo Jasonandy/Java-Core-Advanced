@@ -9,19 +9,17 @@
  */
 package cn.ucaner.fastdfs.test;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import cn.ucaner.fastdfs.FastdfsClient;
+import cn.ucaner.fastdfs.FastdfsClientFactory;
+import com.alibaba.fastjson.JSON;
+import org.junit.Test;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
-
-import com.alibaba.fastjson.JSON;
-
-import cn.ucaner.fastdfs.FastdfsClient;
-import cn.ucaner.fastdfs.FastdfsClientFactory;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
 * @Package：cn.ucaner.fastdfs.test   
