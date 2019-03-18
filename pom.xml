@@ -24,11 +24,11 @@
   
   
   	<!-- https://mvnrepository.com/artifact/javax.jms/jms -->
-	<dependency>
-	    <groupId>javax.jms</groupId>
-	    <artifactId>jms</artifactId>
-	    <version>1.1</version>
-	</dependency>
+	<!--<dependency>-->
+	    <!--<groupId>javax.jms</groupId>-->
+	    <!--<artifactId>jms</artifactId>-->
+	    <!--<version>[1.0,)</version>-->
+	<!--</dependency>-->
   
   	<!-- protobuf  -->
 	<dependency>
@@ -184,7 +184,7 @@
     <dependency> 
       <groupId>junit</groupId>  
       <artifactId>junit</artifactId>  
-      <version>4.11</version>  
+      <version>(4.11,]</version>
       <scope>test</scope> 
     </dependency>
     <dependency>
