@@ -74,8 +74,11 @@ public class MsgSubscriber implements MessageListener{
 	       TopicConnectionFactory topicFactory = (TopicConnectionFactory) context.lookup(factoryJNDI);
 	       //创建连接
 	       topicConnection = topicFactory.createTopicConnection();
-	       topicSession = topicConnection.createTopicSession(false,Session.AUTO_ACKNOWLEDGE);//创建session
-	       topic = (Topic) context.lookup(topicJNDI);//查找到主题
+	       //创建session
+	       topicSession = topicConnection.createTopicSession(false,Session.AUTO_ACKNOWLEDGE);
+	       //查找到主题
+	       topic = (Topic) context.lookup(topicJNDI);
+
 	       //用session创建一个特定queue的消息接收者
 	       topicSubscriber = topicSession.createSubscriber(topic);
 	       //注册监听，这里设置的监听是自己，因为本类已经实现了MessageListener接口，

@@ -41,9 +41,9 @@ public class SendMailTest {
         // 这个类主要来发送邮件
 
         SimpleMailSender sms = new SimpleMailSender();
-        //sms.sendTextMail(mailInfo);// 发送 text格式
+        sms.sendTextMail(mailInfo);// 发送 text格式
         //sms.sendHtmlMail(mailInfo); // 发送html格式
-        if (sms.sendHtmlMail(mailInfo)) { //发送文体格式
+        if (sms.sendTextMail(mailInfo)) { //发送文体格式
 			System.out.println("发送成功！");
 		}else{
 			System.out.println("发送失败！");
