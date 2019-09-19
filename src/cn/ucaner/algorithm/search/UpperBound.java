@@ -27,6 +27,13 @@ public class UpperBound {
 
     private UpperBound() { }
 
+    /**
+     * upperBound
+     * @param array
+     * @param length
+     * @param value
+     * @return
+     */
     public static int upperBound(int[] array, int length, int value) {
         int low = 0;
         int high = length;

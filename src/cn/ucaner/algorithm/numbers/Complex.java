@@ -10,16 +10,7 @@
  */
 package cn.ucaner.algorithm.numbers;
 
-/**
- * A complex number is a number that can be expressed in the form a + bi, where a and b are real numbers and i is the 
- * imaginary unit, satisfying the equation i2 = −1.[1] In this expression, a is the real part and b is the imaginary 
- * part of the complex number. If z=a+bi z=a+bi, then Rz=a, Iz=b.
- * <p>
- * @see <a href="https://en.wikipedia.org/wiki/Complex_number">Complex Number (Wikipedia)</a>
- * <br>
- * @author Mateusz Cianciara <e.cianciara@gmail.com>
- * @author Justin Wetherell <phishman3579@gmail.com>
- */
+
 /**
 * @Package：cn.ucaner.algorithm.numbers   
 * @ClassName：Complex   
@@ -33,19 +24,39 @@ package cn.ucaner.algorithm.numbers;
  */
 public class Complex {
 
+    /**
+     * 实数部分
+     */
     public double real;
+
+    /**
+     * 虚数部分
+     */
     public double imaginary;
 
+    /**
+     * Complex
+     */
     public Complex() {
         this.real = 0.0;
         this.imaginary = 0.0;
     }
 
+    /**
+     * Complex
+     * @param r 实部
+     * @param i 虚部
+     */
     public Complex(double r, double i) {
         this.real = r;
         this.imaginary = i;
     }
 
+    /**
+     * multiply
+     * @param x
+     * @return
+     */
     public Complex multiply(final Complex x) {
         final Complex copy = new Complex(this.real, this.imaginary);
         copy.real = this.real * x.real - this.imaginary * x.imaginary;
@@ -53,6 +64,11 @@ public class Complex {
         return copy;
     }
 
+    /**
+     * 加
+     * @param x 复数
+     * @return
+     */
     public Complex add(final Complex x) {
         final Complex copy = new Complex(this.real, this.imaginary);
         copy.real += x.real;
@@ -60,6 +76,11 @@ public class Complex {
         return copy;
     }
 
+    /**
+     * sub
+     * @param x 复数
+     * @return
+     */
     public Complex sub(final Complex x) {
         final Complex copy = new Complex(this.real, this.imaginary);
         copy.real -= x.real;
@@ -67,15 +88,39 @@ public class Complex {
         return copy;
     }
 
+    /**
+     * abs
+     * @return
+     */
     public double abs() {
         return Math.sqrt(this.real * this.real + this.imaginary * this.imaginary);
     }
 
+    @Override
     public String toString() {
         return "(" + this.real + "," + this.imaginary + ")";
     }
 
+    /**
+     * polar 极坐标
+     * @param rho
+     * @param theta
+     * @return
+     */
     public static Complex polar(final double rho, final double theta) {
         return (new Complex(rho * Math.cos(theta), rho * Math.sin(theta)));
+    }
+
+    /**
+     * just for test
+     * @param args
+     */
+    public static void main(String[] args) {
+        Complex complexa = new Complex(1, 2);
+        Complex complexb = new Complex(2, 3);
+        System.out.println(complexa.toString());
+        System.out.println(complexb.toString());
+        System.out.println(complexa.multiply(complexb));
+        System.out.println(complexa.sub(complexb));
     }
 }

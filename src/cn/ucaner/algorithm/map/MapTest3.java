@@ -9,6 +9,7 @@
  * </html>
  */
 package cn.ucaner.algorithm.map;
+
 /*
  * 此处的变化是将p1,p2的id设成不同，然后都作为key插入map,因为两个key不相同，所以我们的预测是都可以插入，
  * 此时map的size应该为2，待插入后我们修改p2的id为1，即与p1相同，这样就造成了两个entry的key相同的情况，
@@ -19,7 +20,6 @@ package cn.ucaner.algorithm.map;
  * 2.可以修改，但根据某种算法删除p1或p2中的一项，也能起到维护key的唯一性； 
  * 3.可以修改，没有任何事情发生....两项id相同的person实例并存于map中，即存在同一个key对应了两个value。 
  * */
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;

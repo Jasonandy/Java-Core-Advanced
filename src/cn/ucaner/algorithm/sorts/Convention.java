@@ -59,8 +59,14 @@ public class Convention {
 		int n =828;
 		//int m = 8;
 		//int n = 12;
-		System.out.println(divisor(m,n));//最大公约数 
-		System.out.println(gbs(m, n));//最小公倍数
+		/**
+		 * 最大公约数
+		 */
+		System.out.println(divisor(m,n));
+		/**
+		 * 最小公倍数
+		 */
+		System.out.println(gbs(m, n));
 	}
 	
 }

@@ -30,11 +30,18 @@ public class Integers {
     private static final BigDecimal ZERO = new BigDecimal(0);
     private static final BigDecimal TWO = new BigDecimal(2);
 
+    /**
+     * toBinaryUsingDivideAndModulus
+     * @param numberToConvert
+     * @return
+     */
     public static final String toBinaryUsingDivideAndModulus(int numberToConvert) {
         int integer = numberToConvert;
-        if (integer<0) throw new IllegalArgumentException("Method argument cannot be negative. number="+integer);
+        if (integer<0) {
+            throw new IllegalArgumentException("Method argument cannot be negative. number="+integer);
+        }
         StringBuilder builder = new StringBuilder();
-        int temp = 0;
+        int temp;
         while (integer > 0) {
             temp = integer;
             integer = temp / 2;
@@ -43,11 +50,18 @@ public class Integers {
         return builder.reverse().toString();
     }
 
+    /**
+     * toBinaryUsingShiftsAndModulus
+     * @param numberToConvert
+     * @return
+     */
     public static final String toBinaryUsingShiftsAndModulus(int numberToConvert) {
         int integer = numberToConvert;
-        if (integer<0) throw new IllegalArgumentException("Method argument cannot be negative. number="+integer);
+        if (integer<0) {
+            throw new IllegalArgumentException("Method argument cannot be negative. number="+integer);
+        }
         StringBuilder builder = new StringBuilder();
-        int temp = 0;
+        int temp;
         while (integer > 0) {
             temp = integer;
             integer = (temp >> 1);
@@ -56,12 +70,19 @@ public class Integers {
         return builder.reverse().toString();
     }
 
+    /**
+     * toBinaryUsingBigDecimal
+     * @param numberToConvert
+     * @return
+     */
     public static final String toBinaryUsingBigDecimal(int numberToConvert) {
         int integer = numberToConvert;
-        if (integer<0) throw new IllegalArgumentException("Method argument cannot be negative. number="+integer);
+        if (integer<0) {
+            throw new IllegalArgumentException("Method argument cannot be negative. number="+integer);
+        }
         StringBuilder builder = new StringBuilder();
         BigDecimal number = new BigDecimal(integer);
-        BigDecimal[] decimals = null;
+        BigDecimal[] decimals;
         while (number.compareTo(ZERO) > 0) {
             decimals = number.divideAndRemainder(TWO);
             number = decimals[0];
@@ -70,11 +91,18 @@ public class Integers {
         return builder.reverse().toString();
     }
 
+    /**
+     * toBinaryUsingDivideAndDouble
+     * @param numberToConvert
+     * @return
+     */
     public static final String toBinaryUsingDivideAndDouble(int numberToConvert) {
         int integer = numberToConvert;
-        if (integer<0) throw new IllegalArgumentException("Method argument cannot be negative. number="+integer);
+        if (integer<0) {
+            throw new IllegalArgumentException("Method argument cannot be negative. number="+integer);
+        }
         StringBuilder builder = new StringBuilder();
-        double temp = 0d;
+        double temp;
         while (integer > 0) {
             temp = integer/2d;
             integer = (int) temp;
@@ -83,10 +111,16 @@ public class Integers {
         return builder.reverse().toString();
     }
 
+    /**
+     * powerOfTwoUsingLoop
+     * @param numberToCheck
+     * @return
+     */
     public static final boolean powerOfTwoUsingLoop(int numberToCheck) {
         int number = numberToCheck;
-        if (number == 0)
+        if (number == 0) {
             return false;
+        }
         while (number % 2 == 0) {
             number /= 2;
         }
@@ -95,33 +129,55 @@ public class Integers {
         return true;
     }
 
+    /**
+     * powerOfTwoUsingRecursion
+     * @param numberToCheck
+     * @return
+     */
     public static final boolean powerOfTwoUsingRecursion(int numberToCheck) {
         int number = numberToCheck;
-        if (number == 1)
+        if (number == 1) {
             return true;
-        if (number == 0 || number % 2 != 0)
+        }
+        if (number == 0 || number % 2 != 0) {
             return false;
+        }
         return powerOfTwoUsingRecursion(number / 2);
     }
 
+    /**
+     * powerOfTwoUsingLog
+     * @param numberToCheck
+     * @return
+     */
     public static final boolean powerOfTwoUsingLog(int numberToCheck) {
         int number = numberToCheck;
         double doubleLog = Math.log10(number) / Math.log10(2);
         int intLog = (int) doubleLog;
-        if (Double.compare(doubleLog, intLog) == 0)
+        if (Double.compare(doubleLog, intLog) == 0) {
             return true;
+        }
         return false;
     }
 
+    /**
+     * powerOfTwoUsingBits
+     * @param numberToCheck
+     * @return
+     */
     public static final boolean powerOfTwoUsingBits(int numberToCheck) {
         int number = numberToCheck;
-        if (number != 0 && ((number & (number - 1)) == 0))
+        if (number != 0 && ((number & (number - 1)) == 0)) {
             return true;
+        }
         return false;
     }
 
-    // Integer to English
+    /**
+     * Integer to English
+     */
     private static final Map<Integer,String> singleDigits = new HashMap<Integer,String>();
+
     static {
         singleDigits.put(0,"zero");
         singleDigits.put(1,"one");
@@ -146,6 +202,10 @@ public class Integers {
     }
 
     private static final Map<Integer,String> multiDigits = new HashMap<Integer,String>();
+
+    /**
+     * 常量池
+     */
     static {
         multiDigits.put(10,"ten");
         multiDigits.put(20,"twenty");
@@ -180,7 +240,9 @@ public class Integers {
             x = x % HUNDRED;
         }
         if (r > 0) {
-            if (m > 0) builder.append(" ");
+            if (m > 0) {
+                builder.append(" ");
+            }
             if (x <= 19) {
                 builder.append(singleDigits.get(x));
             } else {
@@ -206,7 +268,9 @@ public class Integers {
      */
     public static final String toEnglish(int number) {
         int x = number;
-        if (x>Integer.MAX_VALUE || x<=Integer.MIN_VALUE) throw new IllegalArgumentException("Number has to be <= Integer.MAX_VALUE and > Integer.MIN_VALUE. number="+x);
+        if (x>Integer.MAX_VALUE || x<=Integer.MIN_VALUE) {
+            throw new IllegalArgumentException("Number has to be <= Integer.MAX_VALUE and > Integer.MIN_VALUE. number="+x);
+        }
         StringBuilder builder = new StringBuilder();
         if (x==0) {
             //Zero is a special case
@@ -229,27 +293,47 @@ public class Integers {
         }
         m = x / MILLION;
         if (m > 0) {
-            if (billion) builder.append(" ");
+            if (billion) {
+                builder.append(" ");
+            }
             million = true;
             builder.append(handleUnderOneThousand(m)).append("-million");
             x = x % MILLION;
         }
         m = x / THOUSAND;
         if (m > 0) {
-            if (billion || million) builder.append(" ");
+            if (billion || million) {
+                builder.append(" ");
+            }
             thousand = true;
             builder.append(handleUnderOneThousand(m)).append("-thousand");
             x = x % THOUSAND;
         }
-        if (billion || million || thousand && x!=0) builder.append(" ");
+        if (billion || million || thousand && x!=0) {
+            builder.append(" ");
+        }
         builder.append(handleUnderOneThousand(x));
         return builder.toString();
     }
     
-    //Just for test 
+    /**
+     * ust for test
+     * @param args
+     */
     public static void main(String[] args) {
-		System.out.println(toEnglish(110086));//数字转英文  //one-hundred ten-thousand eighty-six
-		System.out.println(toBinaryUsingDivideAndDouble(12306)); //11000000010010   十进制转二进制
-		System.out.println(toBinaryUsingDivideAndDouble(5)); //101  十进制转二进制
+        /**
+         * 数字转英文  //one-hundred ten-thousand eighty-six
+         */
+		System.out.println(toEnglish(110086));
+        /**
+         * //11000000010010   十进制转二进制
+         */
+		System.out.println(toBinaryUsingDivideAndDouble(12306));
+        /**
+         * 101  十进制转二进制
+         */
+		System.out.println(toBinaryUsingBigDecimal(5));
+        System.out.println(toBinaryUsingShiftsAndModulus(94));
+        System.out.println(toBinaryUsingDivideAndModulus(19));
 	}
 }

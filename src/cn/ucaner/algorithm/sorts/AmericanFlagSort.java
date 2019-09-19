@@ -33,15 +33,22 @@ package cn.ucaner.algorithm.sorts;
  */
 public class AmericanFlagSort {
 
-    private static final int NUMBER_OF_BUCKETS = 10; // 10 for base 10 numbers
+    /**
+     * 10 for base 10 numbers
+     */
+    private static final int NUMBER_OF_BUCKETS = 10;
 
     private AmericanFlagSort() { }
 
     public static Integer[] sort(Integer[] unsorted) {
-        int numberOfDigits = getMaxNumberOfDigits(unsorted); // Max number of digits
+        /**
+         * Max number of digits
+         */
+        int numberOfDigits = getMaxNumberOfDigits(unsorted);
         int max = 1;
-        for (int i = 0; i < numberOfDigits - 1; i++)
+        for (int i = 0; i < numberOfDigits - 1; i++) {
             max *= 10;
+        }
         sort(unsorted, 0, unsorted.length, max);
         return unsorted;
     }
@@ -83,8 +90,9 @@ public class AmericanFlagSort {
             for (int i = 0; i < NUMBER_OF_BUCKETS; i++) {
                 int begin = (i > 0) ? offset[i - 1] : start;
                 int end = offset[i];
-                if (end - begin > 1)
+                if (end - begin > 1) {
                     sort(unsorted, begin, end, divisor / 10);
+                }
             }
         }
     }
@@ -94,8 +102,9 @@ public class AmericanFlagSort {
         int temp = 0;
         for (int i : unsorted) {
             temp = (int) Math.log10(i) + 1;
-            if (temp > max)
+            if (temp > max) {
                 max = temp;
+            }
         }
         return max;
     }

@@ -28,6 +28,13 @@ public class LowerBound {
 
     private LowerBound() { }
 
+    /**
+     * lowerBound
+     * @param array
+     * @param length
+     * @param value
+     * @return
+     */
     public static int lowerBound(int[] array, int length, int value) {
         int low = 0;
         int high = length;

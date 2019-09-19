@@ -27,7 +27,7 @@ public interface EchoService {
 	 * @param ping
 	 * @return String
 	 */
-	public String echo(String ping);
+	String echo(String ping);
 	
 	
 	/**
@@ -35,12 +35,12 @@ public interface EchoService {
 	 * @return String
 	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
-	public String helloWorld();
+	String helloWorld();
 	
 	/**
 	 * @Description: 展示作用
 	 * @Autor: Jason
 	 */
-	public void show();
+	void show();
 	
 }

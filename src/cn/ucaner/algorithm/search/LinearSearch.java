@@ -28,13 +28,17 @@ public class LinearSearch {
     public static final int find(int value, int[] array) {
         for (int i = 0; i < array.length; i++) {
             int iValue = array[i];
-            if (value == iValue)
+            if (value == iValue) {
                 return i;
+            }
         }
         return Integer.MAX_VALUE;
     }
     
-    //Just for test
+    /**
+     * Just for test
+     * @param args
+     */
     public static void main(String[] args) {
 		int[] nums = {1,2,3,4,5,6,7,8,9,0};
 		int finds = 8;

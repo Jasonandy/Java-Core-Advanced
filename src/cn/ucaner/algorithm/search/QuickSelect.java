@@ -28,8 +28,15 @@ public class QuickSelect {
     private static final Random RANDOM = new Random();
 
     private static int[] unsorted = null;
+
     private static int[] temp = null;
 
+    /**
+     * find
+     * @param value
+     * @param array
+     * @return
+     */
     public static final int find(int value, int[] array) {
         unsorted = array;
         temp = new int[unsorted.length];
@@ -43,12 +50,15 @@ public class QuickSelect {
                 tempLength = 0;
                 for (int i = 0; i < length; i++) {
                     int iValue = unsorted[i];
-                    if (value == iValue)
+                    if (value == iValue) {
                         return i;
-                    else if (value > pivot && iValue > pivot)
+                    }
+                    else if (value > pivot && iValue > pivot){
                         temp[tempLength++] = iValue;
-                    else if (value < pivot && iValue < pivot)
+                    }
+                    else if (value < pivot && iValue < pivot) {
                         temp[tempLength++] = iValue;
+                    }
                 }
                 unsorted = temp;
                 length = tempLength;
@@ -58,5 +68,17 @@ public class QuickSelect {
             QuickSelect.unsorted = null;
             QuickSelect.temp = null;
         }
+    }
+
+    /**
+     * just for test
+     * @param args
+     */
+    public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
+        int[] arr = {1,2,3,4,5,5,6,7,213,77,1323,7,77,323,7,77,7,43,7,7};
+        long endTime = System.currentTimeMillis();
+        System.out.println(find(213,arr));
+        System.out.println((endTime-startTime));
     }
 }

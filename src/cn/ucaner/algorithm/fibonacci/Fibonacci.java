@@ -22,25 +22,36 @@ package cn.ucaner.algorithm.fibonacci;
 * @version    V1.0
  */
 public class Fibonacci {
-	
+
+	/**
+	 * just for test
+	 * @param args
+	 */
 	public static void main(String[] args){
-		
-		int[] fib = new int[10];
-		
+		fibonacci(15);
+	}
+
+	/**
+	 * 打印斐波那契数列
+	 * @param nums
+	 */
+	public static void fibonacci(Integer nums){
+
+		int[] fib = new int[nums];
+
 		fib[0] = 0;
 		fib[1] = 1;
-		
-		for(int i= 2;i<fib.length;i++){
-			fib[i] = fib[i-1] + fib[i-2];//Core 第3个数等于前两个数之和
+
+		for (int i = 2; i < nums; i++) {
+			fib[i] = fib[i-1] + fib[i-2];
 		}
-	
-		System.out.print("斐波那契亚数列: ");
-		
-		for(int i = 0;i<fib.length;i++){
-			System.out.print(fib[i] + " ");
+
+		System.out.println("--- 斐波那契亚 ---");
+
+		for (int i = 0; i < nums; i++) {
+			System.out.println(fib[i]+"");
 		}
-		
-		System.out.println();
+		System.out.println("=== 斐波那契亚 ===");
 	}
 }
 //Output

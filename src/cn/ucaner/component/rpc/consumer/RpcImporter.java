@@ -75,8 +75,14 @@ public class RpcImporter<S> {
                     @Override
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                         Socket socket = null;
-                        ObjectOutputStream output = null; //对象输出流
-                        ObjectInputStream  input  = null; //对象输入流
+                        /**
+                         * 对象输出流
+                         */
+                        ObjectOutputStream output = null;
+                        /**
+                         * 对象输入流
+                         */
+                        ObjectInputStream  input  = null;
 
                         try {
                         	

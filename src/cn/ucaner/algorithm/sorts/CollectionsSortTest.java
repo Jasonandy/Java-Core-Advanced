@@ -30,7 +30,10 @@ public class CollectionsSortTest {
         Integer[] num = {5,8,3,9,1,2,3,4,5,5,6,6,7,7,8,12,34,45,67,44,32};
         //double[] num = {4.4,2.9,6.3};  //不可以
         //Double[] num = {4.4,2.9,6.3};  //可以
-        Arrays.sort(num,Collections.reverseOrder()); //对整形数组按降序排序
+        /**
+         * 对整形数组按降序排序
+         */
+        Arrays.sort(num,Collections.reverseOrder());
         for(int i=0;i<num.length;i++){
             System.out.println(num[i]);
         }  

@@ -10,6 +10,17 @@
  */
 package cn.ucaner.algorithm.KMP;
 
+/**
+ * @Package：cn.ucaner.algorithm.KMP
+ * @ClassName：KMP
+ * @Description：   <p> MyKMP </p>
+ * @Author： - Jason
+ * @CreatTime：2018年4月23日 下午8:34:50
+ * @Modify By：
+ * @ModifyTime：  2018年4月23日
+ * @Modify marker：
+ * @version    V1.0
+ */
 public class MyKMP {
 	
 	public static int[] preProcess(char[] B){

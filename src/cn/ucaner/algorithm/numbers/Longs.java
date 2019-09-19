@@ -25,9 +25,16 @@ import java.math.BigDecimal;
  */
 public class Longs {
 
+    /**
+     * toBinaryUsingDivideAndModulus
+     * @param numberToConvert
+     * @return
+     */
     public static final String toBinaryUsingDivideAndModulus(long numberToConvert) {
         long longNumber = numberToConvert;
-        if (longNumber<0) throw new IllegalArgumentException("Method argument cannot be negative. number="+longNumber);
+        if (longNumber<0) {
+            throw new IllegalArgumentException("Method argument cannot be negative. number="+longNumber);
+        }
         StringBuilder builder = new StringBuilder();
         long temp = 0l;
         while (longNumber > 0) {
@@ -38,9 +45,16 @@ public class Longs {
         return builder.reverse().toString();
     }
 
+    /**
+     * toBinaryUsingShiftsAndModulus
+     * @param numberToConvert
+     * @return
+     */
     public static final String toBinaryUsingShiftsAndModulus(long numberToConvert) {
         long longNumber = numberToConvert;
-        if (longNumber<0) throw new IllegalArgumentException("Method argument cannot be negative. number="+longNumber);
+        if (longNumber<0) {
+            throw new IllegalArgumentException("Method argument cannot be negative. number="+longNumber);
+        }
         StringBuilder builder = new StringBuilder();
         long temp = 0l;
         while (longNumber > 0) {
@@ -51,9 +65,16 @@ public class Longs {
         return builder.reverse().toString();
     }
 
+    /**
+     * toBinaryUsingBigDecimal
+     * @param numberToConvert
+     * @return
+     */
     public static final String toBinaryUsingBigDecimal(long numberToConvert) {
         long longNumber = numberToConvert;
-        if (longNumber<0) throw new IllegalArgumentException("Method argument cannot be negative. number="+longNumber);
+        if (longNumber<0) {
+            throw new IllegalArgumentException("Method argument cannot be negative. number="+longNumber);
+        }
         StringBuilder builder = new StringBuilder();
         BigDecimal zero = new BigDecimal(0);
         BigDecimal two = new BigDecimal(2);
@@ -65,5 +86,11 @@ public class Longs {
             builder.append(decimals[1]);
         }
         return builder.reverse().toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(toBinaryUsingBigDecimal(10));
+        System.out.println(toBinaryUsingShiftsAndModulus(0));
+        System.out.println(toBinaryUsingDivideAndModulus(03));
     }
 }

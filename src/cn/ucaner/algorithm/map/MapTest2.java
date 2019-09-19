@@ -23,8 +23,9 @@ public class MapTest2 {
 		Person p2 = new Person();   
 		               
 		p1.setId("1");   
-		p1.setName("name1");   
-		p2.setId("2");   //注意这里设置了不同的ID
+		p1.setName("name1");
+		//注意这里设置了不同的ID
+		p2.setId("2");
 		p2.setName("name2");   
 		                     
 		m.put(p1, "person1");   
